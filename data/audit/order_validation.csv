@@ -1,0 +1,27 @@
+check,passed
+"Exactly 30,000 orders",True
+Unique order IDs,True
+Valid order ID format,True
+No missing required values,True
+Existing customer IDs,True
+Valid category IDs,True
+Channel matches customer acquisition source,True
+Valid payment methods,True
+Valid order statuses,True
+Order dates within project period,True
+Promised dates on or after order dates,True
+Delivery dates present only for delivered orders,True
+Delivery dates within valid range,True
+Nonnegative financial amounts,True
+Discounts do not exceed gross amounts,True
+Refunds match full returned sales,True
+Inventory recovery does not exceed product cost,True
+No return costs or recovery without a return,True
+Undelivered orders have no recognized sales,True
+Cancelled orders have no fulfilment cost,True
+All indicators are zero or one,True
+Returns belong only to delivered orders,True
+Delivery indicators match statuses,True
+Late indicators match delivery dates,True
+Return maturity matches the 30-day window,True
+First-purchase indicators match customer history,True

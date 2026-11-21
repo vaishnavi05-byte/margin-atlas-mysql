@@ -1,0 +1,20 @@
+check,passed
+No missing line values,True
+Unique line IDs,True
+Valid line ID format,True
+Line IDs match their parent orders,True
+Every line references an existing order,True
+Every order has product lines,True
+Every line references an existing product,True
+All catalog products represented,True
+No repeated product within the same order,True
+Positive quantities within database limits,True
+Product category matches order category,True
+Nonnegative line amounts,True
+Line discounts do not exceed gross amounts,True
+Gross amounts match price times quantity,True
+Product costs match unit cost times quantity,True
+Order totals and line totals cover the same orders,True
+Every order reconciles: gross_paise,True
+Every order reconciles: discount_paise,True
+Every order reconciles: cogs_paise,True

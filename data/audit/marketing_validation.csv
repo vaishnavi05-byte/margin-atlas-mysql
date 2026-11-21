@@ -1,0 +1,10 @@
+check,passed
+"Exactly 3,190 marketing rows",True
+No missing values,True
+Unique date-channel pairs,True
+Valid channel IDs,True
+Dates within project period,True
+Every date has all five channels,True
+No unexpected date-channel pairs,True
+Nonnegative marketing spend,True
+Organic has zero direct media spend,True

@@ -10,10 +10,17 @@ MySQL, Python, Power BI, and GitHub.
 Synthetic demonstration data generated with Python.
 
 ## Current progress
-- Created the core MySQL schema with keys and constraints.
-- Configured a Python virtual environment and project dependencies.
-- Generated, validated, and loaded 60 synthetic products.
-- Cleaned and loaded 8,000 synthetic customer profiles.
-- Logged 20 exact duplicate rows and repaired 30 missing regions.
-- Verified customer totals, unique IDs, and repaired regions using SQL.
-- Customer first-order dates remain NULL until order data is available.
+- Created and populated all eight MySQL tables.
+- Generated, validated, and loaded 60 products and 8,000 customers.
+- Logged 20 duplicate customer rows and repaired 30 missing regions.
+- Loaded 30,000 orders and 60,209 product lines.
+- Reconciled each order's gross amount, discount, and product cost.
+- Updated customer first-purchase dates from delivered orders.
+- Loaded 3,190 daily marketing records across five channels.
+- Verified zero reconciliation issues in the final database checks.
+
+## Simulation notes
+- All data, budgets, costs, and business scenarios are synthetic.
+- The reporting snapshot is 30 September 2026.
+- Higher Paid Social promotions and East-region delivery delays
+  were deliberately introduced for analytical practice.
