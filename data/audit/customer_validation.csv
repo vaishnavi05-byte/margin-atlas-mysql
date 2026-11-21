@@ -1,0 +1,9 @@
+check,passed
+Exactly 8000 customers,True
+Unique customer IDs,True
+No missing required values,True
+Positive customer IDs,True
+Valid regions,True
+Valid city tiers,True
+Valid acquisition channels,True
+First-order dates awaiting transactions,True

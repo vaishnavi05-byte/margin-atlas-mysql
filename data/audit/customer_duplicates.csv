@@ -1,0 +1,21 @@
+source_row,customer_id,region,city_tier,acquisition_channel_id,first_order_date,reason
+8002,7981,North,Tier 2,1,,exact_duplicate
+8003,7982,West,Tier 2,2,,exact_duplicate
+8004,7983,East,Tier 1,3,,exact_duplicate
+8005,7984,West,Tier 3,4,,exact_duplicate
+8006,7985,West,Tier 2,3,,exact_duplicate
+8007,7986,West,Tier 2,3,,exact_duplicate
+8008,7987,South,Tier 1,2,,exact_duplicate
+8009,7988,East,Tier 3,1,,exact_duplicate
+8010,7989,West,Tier 2,3,,exact_duplicate
+8011,7990,Central,Tier 1,5,,exact_duplicate
+8012,7991,West,Tier 1,3,,exact_duplicate
+8013,7992,North,Tier 2,4,,exact_duplicate
+8014,7993,South,Tier 2,5,,exact_duplicate
+8015,7994,East,Tier 2,4,,exact_duplicate
+8016,7995,West,Tier 1,3,,exact_duplicate
+8017,7996,West,Tier 2,3,,exact_duplicate
+8018,7997,Central,Tier 1,1,,exact_duplicate
+8019,7998,East,Tier 2,2,,exact_duplicate
+8020,7999,Central,Tier 1,3,,exact_duplicate
+8021,8000,South,Tier 3,1,,exact_duplicate
