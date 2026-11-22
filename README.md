@@ -24,3 +24,9 @@ Synthetic demonstration data generated with Python.
 - The reporting snapshot is 30 September 2026.
 - Higher Paid Social promotions and East-region delivery delays
   were deliberately introduced for analytical practice.
+  ## Power BI report
+- Built an interactive Overview page in Margin Atlas.pbix.
+- Added six KPI cards, a monthly trend, and a channel comparison.
+- Added date-range and acquisition-channel slicers.
+- Validated date and channel filters against source-data totals.
+- Marketing spend is analyzed at date and acquisition-channel level.
