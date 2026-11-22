@@ -30,3 +30,8 @@ Synthetic demonstration data generated with Python.
 - Added date-range and acquisition-channel slicers.
 - Validated date and channel filters against source-data totals.
 - Marketing spend is analyzed at date and acquisition-channel level.
+## Promotions & Returns
+- Added four KPIs, monthly discount and return trends, and a before/after comparison.
+- Included only delivered orders with at least 30 days of follow-up.
+- Validated Paid Social results against SQL: return rate rose from 10.78% to 16.89%, while contribution before marketing per mature order fell from INR 2,281.84 to INR 1,166.13.
+- Documented the fixed snapshot, partial latest cohort, and limitations of causal interpretation.
