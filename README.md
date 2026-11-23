@@ -40,3 +40,8 @@ Synthetic demonstration data generated with Python.
 - Validated East-region results against SQL: late delivery rate rose from 9.86% to 24.29%, and return rate rose from 11.56% to 13.14%.
 - Contribution before marketing per mature order fell from INR 2,186.42 to INR 1,998.35.
 - Documented the observation window and limitations of causal interpretation.
+## Customer Cohorts
+- Analyzed 18 first-purchase cohorts from January 2025 through June 2026, requiring a complete 90-day observation window for each cohort.
+- Counted customers with another order placed and delivered within 90 days of their first delivered purchase.
+- Validated 6,809 eligible customers and 3,410 repeat customers: an overall repeat purchase rate of 50.08%, calculated from customer counts.
+- Verified the June 2026 filter: 416 customers, 204 repeat customers, and a 49.04% repeat rate.
