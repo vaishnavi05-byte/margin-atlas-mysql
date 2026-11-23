@@ -35,3 +35,8 @@ Synthetic demonstration data generated with Python.
 - Included only delivered orders with at least 30 days of follow-up.
 - Validated Paid Social results against SQL: return rate rose from 10.78% to 16.89%, while contribution before marketing per mature order fell from INR 2,281.84 to INR 1,166.13.
 - Documented the fixed snapshot, partial latest cohort, and limitations of causal interpretation.
+## Delivery Performance
+- Added date and region filters, four mature-order KPIs, a monthly trend, and a before/after comparison.
+- Validated East-region results against SQL: late delivery rate rose from 9.86% to 24.29%, and return rate rose from 11.56% to 13.14%.
+- Contribution before marketing per mature order fell from INR 2,186.42 to INR 1,998.35.
+- Documented the observation window and limitations of causal interpretation.
