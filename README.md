@@ -2,6 +2,8 @@
 
 **End-to-end e-commerce profitability investigation with MySQL, Python and native Power BI.**
 
+[Published project branch](https://github.com/vaishnavi05-byte/margin-atlas-mysql/tree/codex/decision-studio) | [Interview walkthrough](docs/interview-walkthrough.md) | [Validation evidence](docs/quality-assurance.md)
+
 Revenue can grow while thousands of orders lose contribution. This project helps a manager choose a category-region problem to investigate, inspect the affected orders and test the economics required for an intervention to break even.
 
 The included **synthetic** snapshot contains 30,000 orders, 60,209 line items and 8,000 customers, January 2025–September 2026. These are simulated observations, not a company's realized results or savings.

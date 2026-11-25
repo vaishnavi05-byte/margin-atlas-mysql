@@ -12,5 +12,8 @@
   "model_business_tables": 14,
   "model_measures": 35,
   "regression_tests_passed": 9,
-  "mysql_cohort_and_grain_diagnostics_verified": true
+  "mysql_cohort_and_grain_diagnostics_verified": true,
+  "github_project_branch_published": true,
+  "github_branch": "https://github.com/vaishnavi05-byte/margin-atlas-mysql/tree/codex/decision-studio",
+  "github_pbix_remote_size_verified": 1938593
 }

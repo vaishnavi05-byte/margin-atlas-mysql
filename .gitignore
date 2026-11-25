@@ -7,3 +7,4 @@ powerbi/**/.pbi/
 powerbi/**/localSettings.json
 *.log
 powerbi/DecisionStudio.pbix
+dist/
