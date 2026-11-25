@@ -3,9 +3,9 @@
   "name": "a4cbafbcce97155c3daf",
   "position": {
     "x": 248,
-    "y": 75,
-    "width": 1380,
-    "height": 28,
+    "y": 78,
+    "width": 1370,
+    "height": 25,
     "z": 10000,
     "tabOrder": 900
   },
@@ -19,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Change the assumptions. Intervention costs apply to every mature order selected.",
+                    "value": "Adjust hypothetical assumptions. Intervention cost applies to every mature selected order; this is not achieved savings.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "16px",
-                      "color": "#4B6677"
+                      "fontSize": "12px",
+                      "color": "#C3D3ED"
                     }
                   }
                 ],

@@ -92,7 +92,7 @@
               "color": {
                 "expr": {
                   "Literal": {
-                    "Value": "'#F1F6F8'"
+                    "Value": "'#EBEEF7'"
                   }
                 }
               }

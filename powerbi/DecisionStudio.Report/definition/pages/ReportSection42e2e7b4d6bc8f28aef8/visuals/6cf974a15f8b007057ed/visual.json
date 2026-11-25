@@ -3,9 +3,9 @@
   "name": "6cf974a15f8b007057ed",
   "position": {
     "x": 248,
-    "y": 22,
-    "width": 1110,
-    "height": 56,
+    "y": 30,
+    "width": 1100,
+    "height": 40,
     "z": 10000,
     "tabOrder": 900
   },
@@ -22,8 +22,8 @@
                     "value": "Payment and fulfilment",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "32px",
-                      "color": "#173243"
+                      "fontSize": "28px",
+                      "color": "#FFFFFF"
                     }
                   }
                 ],

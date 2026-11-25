@@ -3,9 +3,9 @@
   "name": "9344921b2bb6e1e8a72e",
   "position": {
     "x": 248,
-    "y": 75,
-    "width": 1380,
-    "height": 28,
+    "y": 78,
+    "width": 1370,
+    "height": 25,
     "z": 10000,
     "tabOrder": 900
   },
@@ -19,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Compare discount bands with mature outcomes. Observed promotion differences are not treatment effects.",
+                    "value": "Select a chart to focus the page. Hover for detail; reset page filters to start again.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "16px",
-                      "color": "#4B6677"
+                      "fontSize": "12px",
+                      "color": "#C3D3ED"
                     }
                   }
                 ],

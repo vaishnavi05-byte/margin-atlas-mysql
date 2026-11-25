@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "48343bdfcf8146656e3d",
   "position": {
-    "x": 16,
-    "y": 352,
-    "width": 184,
-    "height": 44,
+    "x": 14,
+    "y": 342,
+    "width": 188,
+    "height": 40,
     "z": 10100,
     "tabOrder": 950
   },
@@ -34,14 +34,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Customer cohorts'"
+                  "Value": "'04  Customer cohorts'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "11D"
                 }
               }
             },
@@ -57,7 +57,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#D8E2F2'"
                     }
                   }
                 }
@@ -130,7 +130,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#223F51'"
+                      "Value": "'#17263D'"
                     }
                   }
                 }
@@ -155,7 +155,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#146878'"
+                      "Value": "'#33445F'"
                     }
                   }
                 }

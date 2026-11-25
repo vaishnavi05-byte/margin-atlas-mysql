@@ -3,9 +3,9 @@
   "name": "a22bff3c6fbae7360b73",
   "position": {
     "x": 248,
-    "y": 22,
-    "width": 1110,
-    "height": 56,
+    "y": 30,
+    "width": 1100,
+    "height": 40,
     "z": 10000,
     "tabOrder": 900
   },
@@ -22,8 +22,8 @@
                     "value": "Leakage explorer",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "32px",
-                      "color": "#173243"
+                      "fontSize": "28px",
+                      "color": "#FFFFFF"
                     }
                   }
                 ],

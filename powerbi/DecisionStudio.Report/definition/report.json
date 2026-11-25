@@ -11,13 +11,13 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "DecisionStudio-9d22bc51.json",
+      "name": "PremiumWorkspace.json",
+      "type": "RegisteredResources",
       "reportVersionAtImport": {
         "visual": "2.15.0",
         "report": "3.4.0",
-        "page": "2.3.1"
-      },
-      "type": "RegisteredResources"
+        "page": "2.1.0"
+      }
     }
   },
   "objects": {
@@ -41,8 +41,8 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "DecisionStudio-9d22bc51.json",
-          "path": "DecisionStudio-9d22bc51.json",
+          "name": "PremiumWorkspace.json",
+          "path": "PremiumWorkspace.json",
           "type": "CustomTheme"
         }
       ]

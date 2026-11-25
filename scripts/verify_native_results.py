@@ -34,3 +34,6 @@ if __name__=='__main__':
     verify()
     from verify_commerce_results import verify as verify_commerce
     verify_commerce()
+    if (ROOT/'docs/comparison-dax-results.json').exists():
+        import runpy
+        runpy.run_path(str(ROOT/'scripts/verify_comparison_results.py'),run_name='__main__')

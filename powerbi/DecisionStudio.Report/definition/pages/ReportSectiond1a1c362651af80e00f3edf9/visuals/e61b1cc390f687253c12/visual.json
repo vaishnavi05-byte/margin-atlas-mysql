@@ -3,8 +3,8 @@
   "name": "e61b1cc390f687253c12",
   "position": {
     "x": 24,
-    "y": 116,
-    "width": 178,
+    "y": 123,
+    "width": 180,
     "height": 26,
     "z": 10000,
     "tabOrder": 900
@@ -19,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "DECISION STUDIO",
+                    "value": "ANALYTICS WORKSPACE",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "12px",
-                      "color": "#7DD5CD"
+                      "fontSize": "10px",
+                      "color": "#50D5CB"
                     }
                   }
                 ],

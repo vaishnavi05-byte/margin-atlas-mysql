@@ -3,9 +3,9 @@
   "name": "c64e737ce341b61e950d",
   "position": {
     "x": 248,
-    "y": 75,
-    "width": 1380,
-    "height": 28,
+    "y": 78,
+    "width": 1370,
+    "height": 25,
     "z": 10000,
     "tabOrder": 900
   },
@@ -19,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Inspect payment mix, shipped-order costs and cancellation outcomes at the correct grain.",
+                    "value": "Select a chart to focus the page. Hover for detail; reset page filters to start again.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "16px",
-                      "color": "#4B6677"
+                      "fontSize": "12px",
+                      "color": "#C3D3ED"
                     }
                   }
                 ],

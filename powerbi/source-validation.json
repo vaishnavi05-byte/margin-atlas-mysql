@@ -1,9 +1,9 @@
 {
   "validation_type": "JSON syntax and TMDL field/relationship bindings",
-  "documents_checked": 343,
-  "direct_field_bindings_checked": 223,
-  "model_tables": 20,
-  "measures": 60,
+  "documents_checked": 411,
+  "direct_field_bindings_checked": 244,
+  "model_tables": 22,
+  "measures": 73,
   "result": "PASS",
   "schema_validation": "See validation-report.json from Microsoft authoring CLI",
   "native_execution": "See docs/native-validation.json"

@@ -1,3 +1,5 @@
+> Current release: **12 pages / 73 measures** with a colour refresh and period comparison. [Latest guide](premium-dashboard-release.md). This catalog documents the four commerce pages introduced in the previous 11-page release.
+
 # E-commerce dashboard suite
 
 Expanded 26 November 2026. Eleven analytical pages in one native Power BI report, including a contextual order-evidence page. This is one portfolio project with multiple dashboards; it is not eleven independent projects or eleven hosted Power BI Service dashboards.

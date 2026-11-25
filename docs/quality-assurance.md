@@ -1,3 +1,9 @@
+## Current premium release
+
+The latest delivery has 12 pages and 73 DAX measures. All pages were refreshed and captured in native Desktop. The existing core and commerce checks are retained; **40 additional native comparisons** pass for disconnected period controls. See [period verification](comparison-validation.json) and [release guide](premium-dashboard-release.md). The 11-page QA record below is historical.
+
+The current official authoring CLI run reports zero errors, eight unreachable-schema warnings and twelve conservative title-height warnings (40 px at the configured font). Actual native title rendering was inspected and is readable. The current PBIX was saved by Desktop, contains twelve native pages and a full imported DataModel; its ZIP CRC check passes. All 14 regression tests and the existing 519 commerce DAX comparisons pass after the redesign. The source data has no working-tree changes.
+
 # Quality assurance evidence
 
 ## Expanded eleven-page release - 26 November 2026

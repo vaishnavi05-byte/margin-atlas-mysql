@@ -12,7 +12,7 @@ def main():
     if status.strip():raise ValueError('Commit project changes before packaging')
     files=subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode('utf-8').split('\0')
     files=[f for f in files if f]
-    assert 'powerbi/MarginAtlasDecisionStudio_Expanded.pbix' in files
+    assert 'powerbi/MarginAtlasDecisionStudio_Premium.pbix' in files
     assert all(not any(part in ['tmp','.git','.pbi','.venv'] for part in Path(f).parts) for f in files)
     a.output.parent.mkdir(parents=True,exist_ok=True)
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()

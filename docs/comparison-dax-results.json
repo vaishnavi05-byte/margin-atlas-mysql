@@ -1,0 +1,76 @@
+[
+  {
+    "rows": [
+      {
+        "[Baseline]": 11004346.0,
+        "[Comparison]": 10235822.0,
+        "[SalesChange]": -768524.0,
+        "[Growth]": -0.06983822573372375,
+        "[BaselineContribution]": 4490904.45,
+        "[ComparisonContribution]": 4482675.83,
+        "[ContributionChange]": -8228.620000000112
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "DimCustomer[region]": "Unknown",
+        "[Baseline]": 36505.0,
+        "[Comparison]": 45780.0,
+        "[SalesChange]": 9275.0,
+        "[BaselineOrders]": 8,
+        "[ComparisonOrders]": 12
+      },
+      {
+        "DimCustomer[region]": "Central",
+        "[Baseline]": 1940190.0,
+        "[Comparison]": 2215600.0,
+        "[SalesChange]": 275410.0,
+        "[BaselineOrders]": 427,
+        "[ComparisonOrders]": 488
+      },
+      {
+        "DimCustomer[region]": "East",
+        "[Baseline]": 2274592.0,
+        "[Comparison]": 1945878.0,
+        "[SalesChange]": -328714.0,
+        "[BaselineOrders]": 480,
+        "[ComparisonOrders]": 462
+      },
+      {
+        "DimCustomer[region]": "North",
+        "[Baseline]": 2242390.0,
+        "[Comparison]": 1911744.0,
+        "[SalesChange]": -330646.0,
+        "[BaselineOrders]": 463,
+        "[ComparisonOrders]": 455
+      },
+      {
+        "DimCustomer[region]": "West",
+        "[Baseline]": 2385803.0,
+        "[Comparison]": 1931599.0,
+        "[SalesChange]": -454204.0,
+        "[BaselineOrders]": 523,
+        "[ComparisonOrders]": 455
+      },
+      {
+        "DimCustomer[region]": "South",
+        "[Baseline]": 2124866.0,
+        "[Comparison]": 2185221.0,
+        "[SalesChange]": 60355.0,
+        "[BaselineOrders]": 448,
+        "[ComparisonOrders]": 479
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "[Baseline]": 559030.0,
+        "[Comparison]": 2332350.0,
+        "[SalesChange]": 1773320.0
+      }
+    ]
+  }
+]

@@ -177,3 +177,42 @@ CALCULATE(DISTINCTCOUNT(FactItems[order_id]),KEEPFILTERS(FactOrders[delivery_eli
 
 Units Per Item Order =
 DIVIDE([Recognized Units],[Delivered Item Orders])
+
+Baseline Sales =
+CALCULATE([Net Sales],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(BaselineMonth[Month],"2026-08")},DimDate[month]))
+
+Comparison Sales =
+CALCULATE([Net Sales],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(ComparisonMonth[Month],"2026-09")},DimDate[month]))
+
+Sales Change =
+[Comparison Sales]-[Baseline Sales]
+
+Baseline Contribution =
+CALCULATE([Contribution Before Marketing],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(BaselineMonth[Month],"2026-08")},DimDate[month]))
+
+Comparison Contribution =
+CALCULATE([Contribution Before Marketing],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(ComparisonMonth[Month],"2026-09")},DimDate[month]))
+
+Contribution Change =
+[Comparison Contribution]-[Baseline Contribution]
+
+Baseline Orders =
+CALCULATE([Orders],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(BaselineMonth[Month],"2026-08")},DimDate[month]))
+
+Comparison Orders =
+CALCULATE([Orders],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(ComparisonMonth[Month],"2026-09")},DimDate[month]))
+
+Orders Change =
+[Comparison Orders]-[Baseline Orders]
+
+Baseline Late Rate =
+CALCULATE([Late Rate],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(BaselineMonth[Month],"2026-08")},DimDate[month]))
+
+Comparison Late Rate =
+CALCULATE([Late Rate],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(ComparisonMonth[Month],"2026-09")},DimDate[month]))
+
+Late Rate Change =
+[Comparison Late Rate]-[Baseline Late Rate]
+
+Sales Change Percent =
+DIVIDE([Sales Change],[Baseline Sales])

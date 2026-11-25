@@ -1,0 +1,3 @@
+EVALUATE ROW("Baseline",[Baseline Sales],"Comparison",[Comparison Sales],"SalesChange",[Sales Change],"Growth",[Sales Change Percent],"BaselineContribution",[Baseline Contribution],"ComparisonContribution",[Comparison Contribution],"ContributionChange",[Contribution Change])
+EVALUATE SUMMARIZECOLUMNS(DimCustomer[region],"Baseline",[Baseline Sales],"Comparison",[Comparison Sales],"SalesChange",[Sales Change],"BaselineOrders",[Baseline Orders],"ComparisonOrders",[Comparison Orders])
+EVALUATE CALCULATETABLE(ROW("Baseline",[Baseline Sales],"Comparison",[Comparison Sales],"SalesChange",[Sales Change]),TREATAS({"2025-01"},BaselineMonth[Month]),TREATAS({"2026-01"},ComparisonMonth[Month]),TREATAS({"Paid Search"},DimChannel[channel]))

@@ -83,6 +83,7 @@ def main():
       'Promotion diagnostics':'Compare discount bands with mature outcomes. Observed promotion differences are not treatment effects.',
       'Payment and fulfilment':'Inspect payment mix, shipped-order costs and cancellation outcomes at the correct grain.',
       'Product and baskets':'Item sales and merchandise margin before refunds and shared order costs. No product profit allocation.'
+      ,'Compare periods':'Choose independent baseline and comparison months; retain category, channel and region context.'
     }
     for idx,pid in enumerate(pids):
         page=DEF/'pages'/pid
@@ -146,6 +147,13 @@ def main():
     rj['themeCollection']['customTheme']={'name':theme_name,'type':'RegisteredResources','reportVersionAtImport':{'visual':'2.15.0','report':'3.4.0','page':'2.1.0'}}
     rj['resourcePackages']=[p for p in rj.get('resourcePackages',[]) if p['name']!='RegisteredResources']+[{'name':'RegisteredResources','type':'RegisteredResources','items':[{'name':theme_name,'path':theme_name,'type':'CustomTheme'}]}]
     save(report_path,rj)
+    # Keep the current premium visual system when older authoring helpers restyle pages.
+    if (ROOT/'scripts/premium_design.py').exists():
+        import premium_design
+        premium_design.premium(REPORT,'MARGIN\nATLAS','#50D5CB','#F28B73','#17263D','SYNTHETIC DATA\nSnapshot 30 Sep 2026',{
+            'Compare periods':'Choose a baseline and comparison month. Defaults: Aug vs Sep 2026. Region and category selections apply to both.',
+            'Scenario lab':'Adjust hypothetical assumptions. Intervention cost applies to every mature selected order; this is not achieved savings.',
+            'Product and baskets':'Item sales and merchandise margin before refunds and shared order costs. Product filters do not allocate order profit.'})
     print(f'Styled {len(pids)} pages with native navigation, reset actions and order-evidence back navigation.')
 
 

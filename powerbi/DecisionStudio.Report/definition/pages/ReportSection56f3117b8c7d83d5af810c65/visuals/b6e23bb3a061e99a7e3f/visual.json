@@ -4,8 +4,8 @@
   "position": {
     "x": 24,
     "y": 894,
-    "width": 174,
-    "height": 60,
+    "width": 176,
+    "height": 90,
     "z": 10000,
     "tabOrder": 900
   },
@@ -22,8 +22,8 @@
                     "value": "SYNTHETIC DATA",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "12px",
-                      "color": "#B5CAD5"
+                      "fontSize": "11px",
+                      "color": "#B4C2DA"
                     }
                   }
                 ],
@@ -35,8 +35,8 @@
                     "value": "Snapshot 30 Sep 2026",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "12px",
-                      "color": "#B5CAD5"
+                      "fontSize": "11px",
+                      "color": "#B4C2DA"
                     }
                   }
                 ],

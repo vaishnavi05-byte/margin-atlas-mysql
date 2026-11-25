@@ -3,9 +3,9 @@
   "name": "6dd7263536faa6ee8e09",
   "position": {
     "x": 248,
-    "y": 22,
-    "width": 1110,
-    "height": 56,
+    "y": 30,
+    "width": 1100,
+    "height": 40,
     "z": 10000,
     "tabOrder": 900
   },
@@ -22,8 +22,8 @@
                     "value": "Decision queue",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "32px",
-                      "color": "#173243"
+                      "fontSize": "28px",
+                      "color": "#FFFFFF"
                     }
                   }
                 ],

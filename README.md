@@ -1,12 +1,12 @@
 # Margin Atlas Decision Studio
 
-**An 11-page e-commerce dashboard suite with MySQL, Python and native Power BI: 60 DAX measures, 30,000 synthetic orders and 60 products.**
+**A 12-page e-commerce dashboard suite with MySQL, Python and native Power BI: 73 DAX measures, 30,000 synthetic orders and 60 products.**
 
 [Published project branch](https://github.com/vaishnavi05-byte/margin-atlas-mysql/tree/codex/decision-studio) | [Interview walkthrough](docs/interview-walkthrough.md) | [Validation evidence](docs/quality-assurance.md)
 
 **Verified on GitHub Actions:** [Windows and Linux checks passed](https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45716311301) for the expanded 11-page release. Both runners rebuilt the data, passed the 14-test suite, executed both notebooks and reconciled saved native evidence.
 
-**Expanded-suite validation:** 14 regression tests pass locally. The added dashboards reconcile with independent pandas through **519 native DAX comparisons and 302 MySQL comparisons**. All eleven pages were refreshed and rendered in Power BI Desktop. GitHub Actions rebuilds the data, executes both notebooks, validates source bindings and reconciles saved native DAX evidence; it does not launch Desktop.
+**Expanded-suite validation:** 14 regression tests pass locally. The added dashboards reconcile with independent pandas through **519 native DAX comparisons and 302 MySQL comparisons**. All twelve pages were refreshed and rendered in Power BI Desktop. GitHub Actions rebuilds the data, executes both notebooks, validates source bindings and reconciles saved native DAX evidence; it does not launch Desktop.
 
 Revenue can grow while thousands of orders lose contribution. This project helps a manager choose a category-region problem to investigate, inspect the affected orders and test the economics required for an intervention to break even.
 
@@ -14,9 +14,15 @@ The included **synthetic** snapshot contains 30,000 orders, 60,209 line items an
 
 ![Business pulse](docs/images/Business%20pulse.png)
 
+## Colour refresh and comparison workspace
+
+Midnight blue, turquoise and coral, rounded panels, compact KPI cards and numbered navigation give the suite a consistent visual system. The new comparison page reconciles **40 native results** to order-level data and opens with August versus September 2026. See [the new design, controls and interview guide](docs/premium-dashboard-release.md).
+
+![Period comparison](docs/images/Compare%20periods.png)
+
 ## Explore the dashboard
 
-Open **[the expanded native report](powerbi/MarginAtlasDecisionStudio_Expanded.pbix)** in a current Power BI Desktop release. Imported data is included, so the snapshot works immediately. The earlier `MarginAtlasDecisionStudio.pbix` is retained as the seven-page baseline; the expanded file is the current delivery.
+Open **[the current native report](powerbi/MarginAtlasDecisionStudio_Premium.pbix)** in a current Power BI Desktop release. Imported data is included, so the snapshot works immediately. The earlier `MarginAtlasDecisionStudio.pbix` is retained as the seven-page baseline; the 11-page expanded file is also retained as a historical release. The Premium file is the current 12-page delivery.
 
 For editable, version-controlled source, run `python scripts/configure_data_path.py`, open **[powerbi/DecisionStudio.pbip](powerbi/DecisionStudio.pbip)** and select **Home → Refresh**. For a moved PBIX, change its `DataFolder` parameter in Transform data → Manage parameters before refreshing.
 
@@ -34,6 +40,7 @@ In Desktop, **Ctrl-click navigation/reset buttons**. In reading mode, use a norm
 | Promotion diagnostics | Exact discount bands, contribution comparisons, mature return rates and filters |
 | Payment and fulfilment | COD/prepaid mix, shipped-order fulfilment cost, payment fees and cancellation outcomes |
 | Product and baskets | Product sales and merchandise margin before refunds, recognized units and product-bearing baskets |
+| Compare periods | Independent baseline/comparison month controls, signed deltas and region/channel comparisons |
 | Order evidence | Native segment drillthrough, order/status filters and back navigation |
 
 Right-click a **segment_key** cell in the leakage or decision table, then choose **Drill through → Order evidence**. Monetary source columns on the evidence page are in **paise**.
@@ -107,7 +114,7 @@ SQL includes primary/foreign keys, integer monetary types, views, CTEs, window r
 
 ### Power BI and verification
 
-The model uses single-direction dimensions, a dedicated date table and a separate date/channel marketing fact. Orders filter the item fact through unique order IDs; a product dimension filters items without inventing product-level order costs. There are 16 business tables, plus four Desktop-generated date definitions. Disconnected controls select metrics, sample thresholds and scenario assumptions; a separate recovery axis preserves the full sensitivity curve.
+The model uses single-direction dimensions, a dedicated date table and a separate date/channel marketing fact. Orders filter the item fact through unique order IDs; a product dimension filters items without inventing product-level order costs. There are 18 business tables, plus four Desktop-generated date definitions. Disconnected controls select metrics, sample thresholds and scenario assumptions; a separate recovery axis preserves the full sensitivity curve.
 
 Editable TMDL is under `powerbi/DecisionStudio.SemanticModel/definition`; PBIR pages/actions are under `powerbi/DecisionStudio.Report/definition`. These are the authoritative report sources. Normal reproduction preserves these native definitions and your report edits.
 

@@ -1,30 +1,71 @@
 {
-  "name": "Decision Studio | Teal and Ink",
+  "name": "PremiumWorkspace.json",
   "dataColors": [
-    "#087F8C",
-    "#D87145",
-    "#253E5D",
-    "#8F6D9E",
-    "#47966D"
+    "#50D5CB",
+    "#F28B73",
+    "#708BFF",
+    "#E7B450",
+    "#BC8AE8",
+    "#478DAB"
   ],
-  "background": "#F4F7FA",
-  "foreground": "#172C45",
-  "tableAccent": "#087F8C",
+  "background": "#FFFFFF",
+  "foreground": "#263650",
+  "tableAccent": "#50D5CB",
   "textClasses": {
     "label": {
       "fontFace": "Segoe UI",
       "fontSize": 11,
-      "color": "#38506B"
+      "color": "#53647E"
     },
     "title": {
       "fontFace": "Segoe UI Semibold",
-      "fontSize": 14,
-      "color": "#172C45"
+      "fontSize": 13,
+      "color": "#263650"
     },
     "callout": {
       "fontFace": "Segoe UI Semibold",
-      "fontSize": 29,
-      "color": "#087F8C"
+      "fontSize": 27,
+      "color": "#17263D"
+    }
+  },
+  "visualStyles": {
+    "tableEx": {
+      "*": {
+        "values": [
+          {
+            "fontSize": 11
+          }
+        ],
+        "columnHeaders": [
+          {
+            "fontSize": 11,
+            "bold": true
+          }
+        ],
+        "grid": [
+          {
+            "rowPadding": 7
+          }
+        ]
+      }
+    },
+    "lineChart": {
+      "*": {
+        "lineStyles": [
+          {
+            "strokeWidth": 3
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "header": [
+          {
+            "show": false
+          }
+        ]
+      }
     }
   }
 }

@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "numeric_comparisons": 40,
+  "contexts": [
+    "default Aug vs Sep 2026",
+    "six regions",
+    "Jan 2025 vs Jan 2026, Paid Search"
+  ],
+  "periods": "disconnected single-select controls; date filters replaced, other dimensions retained"
+}

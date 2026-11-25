@@ -525,3 +525,42 @@ table FactOrders
 		mode: import
 		source = ReadCSV("FactOrders",{{"order_id",type text},{"customer_id",Int64.Type},{"order_date",type date},{"category_id",Int64.Type},{"channel_id",Int64.Type},{"payment_method",type text},{"promised_date",type date},{"delivered_date",type date},{"status",type text},{"gross_paise",Int64.Type},{"discount_paise",Int64.Type},{"refund_paise",Int64.Type},{"cogs_paise",Int64.Type},{"recovered_inventory_paise",Int64.Type},{"fulfilment_paise",Int64.Type},{"payment_fee_paise",Int64.Type},{"reverse_logistics_paise",Int64.Type},{"return_flag",Int64.Type},{"late_flag",Int64.Type},{"delivery_eligible",Int64.Type},{"return_mature",Int64.Type},{"new_customer",Int64.Type},{"net_sales_paise",Int64.Type},{"net_product_cost_paise",Int64.Type},{"contribution_before_marketing_paise",Int64.Type},{"month",type text},{"category",type text},{"channel",type text},{"region",type text},{"segment_key",type text},{"negative_order",Int64.Type},{"negative_contribution_paise",Int64.Type},{"mature_returns",Int64.Type},{"observed_return_cost_paise",Int64.Type},{"scenario_return_base_paise",Int64.Type},{"mature_late_orders",Int64.Type},{"delivery_days",Int64.Type},{"discount_band",type text},{"discount_band_sort",Int64.Type}})
 
+
+	measure 'Baseline Sales' = CALCULATE([Net Sales],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(BaselineMonth[Month],"2026-08")},DimDate[month]))
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+
+	measure 'Comparison Sales' = CALCULATE([Net Sales],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(ComparisonMonth[Month],"2026-09")},DimDate[month]))
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+
+	measure 'Sales Change' = [Comparison Sales]-[Baseline Sales]
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+
+	measure 'Baseline Contribution' = CALCULATE([Contribution Before Marketing],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(BaselineMonth[Month],"2026-08")},DimDate[month]))
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+
+	measure 'Comparison Contribution' = CALCULATE([Contribution Before Marketing],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(ComparisonMonth[Month],"2026-09")},DimDate[month]))
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+
+	measure 'Contribution Change' = [Comparison Contribution]-[Baseline Contribution]
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+
+	measure 'Baseline Orders' = CALCULATE([Orders],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(BaselineMonth[Month],"2026-08")},DimDate[month]))
+		formatString: #,0
+
+	measure 'Comparison Orders' = CALCULATE([Orders],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(ComparisonMonth[Month],"2026-09")},DimDate[month]))
+		formatString: #,0
+
+	measure 'Orders Change' = [Comparison Orders]-[Baseline Orders]
+		formatString: #,0
+
+	measure 'Baseline Late Rate' = CALCULATE([Late Rate],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(BaselineMonth[Month],"2026-08")},DimDate[month]))
+		formatString: 0.0%
+
+	measure 'Comparison Late Rate' = CALCULATE([Late Rate],REMOVEFILTERS(DimDate),TREATAS({SELECTEDVALUE(ComparisonMonth[Month],"2026-09")},DimDate[month]))
+		formatString: 0.0%
+
+	measure 'Late Rate Change' = [Comparison Late Rate]-[Baseline Late Rate]
+		formatString: 0.0%
+
+	measure 'Sales Change Percent' = DIVIDE([Sales Change],[Baseline Sales])
+		formatString: 0.0%;-0.0%;0.0%
