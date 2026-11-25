@@ -1,0 +1,36 @@
+name: Decision Studio release verification
+on:
+  workflow_dispatch:
+    inputs:
+      project_ref:
+        description: Project branch or commit to verify
+        required: true
+        default: codex/decision-studio
+        type: string
+permissions:
+  contents: read
+jobs:
+  contracts:
+    name: Python / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v6.1.0
+        with:
+          ref: ${{ inputs.project_ref }}
+      - uses: actions/setup-python@v6.1.0
+        with:
+          python-version: '3.12'
+      - name: Rebuild data and run regression tests
+        run: python scripts/reproduce.py
+      - name: Install notebook dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Execute independent pandas investigation
+        run: python scripts/analyze_independently.py
+      - name: Validate Power BI source bindings
+        run: python scripts/validate_native_source.py
+      - name: Reconcile saved native DAX evidence
+        run: python scripts/verify_native_results.py
