@@ -7,7 +7,7 @@
   "native_dax_reconciled": true,
   "native_category_filter_reset_navigation_scenario_and_drillthrough_verified": true,
   "native_pbix_included": true,
-  "github_remote_workflow_run_verified": false,
+  "github_remote_workflow_run_verified": true,
   "power_bi_service_publication_verified": false,
   "model_business_tables": 14,
   "model_measures": 35,
@@ -15,5 +15,11 @@
   "mysql_cohort_and_grain_diagnostics_verified": true,
   "github_project_branch_published": true,
   "github_branch": "https://github.com/vaishnavi05-byte/margin-atlas-mysql/tree/codex/decision-studio",
-  "github_pbix_remote_size_verified": 1938593
+  "github_pbix_remote_size_verified": 1938593,
+  "github_actions_run_url": "https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45653041355",
+  "github_verified_platforms": [
+    "ubuntu-latest",
+    "windows-latest"
+  ],
+  "github_tested_project_commit": "ba8f682bee0b43ba72399d6a110deff001717bc3"
 }

@@ -14,4 +14,8 @@ Checks performed 25 November 2026 on the included synthetic snapshot.
 
 `data/validation.json` fingerprints source files. `docs/native-validation.json` and `docs/mysql-validation.json` contain machine-readable reconciliation evidence. Screenshot images show actual Desktop rendering; they are not design mockups.
 
-GitHub Actions configuration is included. Local success does not establish that a remote workflow ran. Power BI service publishing and credentials are separate from the completed local report.
+The final GitHub Actions verification completed successfully on both Ubuntu and Windows: [run 45653041355](https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45653041355). Each runner rebuilt the data, passed all nine regression tests, executed the independent pandas notebook, validated native source bindings and reconciled saved DAX results with Python. CI does not launch Power BI Desktop; the native engine execution and visual interaction checks above were performed locally.
+
+The release workflow is registered on main and checked out project commit `ba8f682bee0b43ba72399d6a110deff001717bc3`. This release changes documentation, evidence and completion metadata while retaining the tested functional source. See `docs/github-actions-verification.json` and `docs/images/GitHub verification.jpg`.
+
+Power BI service hosting is separate from the delivered native PBIX/PBIP report.

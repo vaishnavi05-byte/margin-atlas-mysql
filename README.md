@@ -4,6 +4,8 @@
 
 [Published project branch](https://github.com/vaishnavi05-byte/margin-atlas-mysql/tree/codex/decision-studio) | [Interview walkthrough](docs/interview-walkthrough.md) | [Validation evidence](docs/quality-assurance.md)
 
+**Verified on GitHub Actions:** [Windows and Linux checks passed](https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45653041355). Both runners rebuilt the data, passed the nine regression tests, executed the pandas notebook, validated Power BI source bindings and reconciled saved native DAX evidence with Python. The original native DAX queries were executed in Desktop; CI verifies their recorded evidence rather than running Desktop.
+
 Revenue can grow while thousands of orders lose contribution. This project helps a manager choose a category-region problem to investigate, inspect the affected orders and test the economics required for an intervention to break even.
 
 The included **synthetic** snapshot contains 30,000 orders, 60,209 line items and 8,000 customers, January 2025–September 2026. These are simulated observations, not a company's realized results or savings.
@@ -111,4 +113,6 @@ Editable TMDL is under `powerbi/DecisionStudio.SemanticModel/definition`; PBIR p
 
 This is an original extension of Vaishnavi's earlier Margin Atlas MySQL portfolio. Source SHA-256 fingerprints are in `data/validation.json`. No Aditya code, assets, wording, data or findings were copied; his public presentation informed the quality benchmark. Standard statistical and BI methods are not claimed as inventions.
 
-Read [hiring research](docs/hiring-research.md) and the [interview walkthrough](docs/interview-walkthrough.md). Do not describe this simulation as client work or modeled improvements as delivered impact. GitHub Actions is configured; a remote run and hosted Power BI publication require authenticated accounts and are separate from local validation.
+Read [hiring research](docs/hiring-research.md) and the [interview walkthrough](docs/interview-walkthrough.md). Do not describe this simulation as client work or modeled improvements as delivered impact.
+
+The [release verification workflow](https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/workflows/decision-studio.yml) is registered on the repository's main branch and checks out the selected project commit. To repeat it, choose **Run workflow**, keep the workflow branch as **main**, and enter `codex/decision-studio` or an exact project commit in **Project branch or commit to verify**. [Recorded CI evidence](docs/github-actions-verification.json) identifies the tested commit; functional source is unchanged in this documentation update. The delivered dashboard is a native PBIX/PBIP report; Power BI Service hosting is a separate deployment option.
