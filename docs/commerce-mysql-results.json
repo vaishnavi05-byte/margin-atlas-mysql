@@ -1,0 +1,607 @@
+[
+  [
+    {
+      "channel": "Paid Search",
+      "placed_orders": "8416",
+      "net_sales_inr": "41394535.0000",
+      "spend_inr": "1281448.0000",
+      "after_marketing_inr": "16965833.6300"
+    },
+    {
+      "channel": "Organic",
+      "placed_orders": "7270",
+      "net_sales_inr": "35844355.0000",
+      "spend_inr": "0.0000",
+      "after_marketing_inr": "15987059.2500"
+    },
+    {
+      "channel": "Paid Social",
+      "placed_orders": "8118",
+      "net_sales_inr": "35097888.0000",
+      "spend_inr": "1759828.7500",
+      "after_marketing_inr": "11777927.0300"
+    },
+    {
+      "channel": "Email",
+      "placed_orders": "3727",
+      "net_sales_inr": "18034065.0000",
+      "spend_inr": "206034.0000",
+      "after_marketing_inr": "7863571.7200"
+    },
+    {
+      "channel": "Affiliate",
+      "placed_orders": "2469",
+      "net_sales_inr": "12252050.0000",
+      "spend_inr": "287150.0000",
+      "after_marketing_inr": "5173644.9900"
+    }
+  ],
+  [
+    {
+      "discount_band": "0%",
+      "placed_orders": "6269",
+      "net_sales_inr": "34912500.0000",
+      "contribution_inr": "16986174.6200",
+      "mature_orders": "5835",
+      "mature_return_rate": "0.1097"
+    },
+    {
+      "discount_band": "1-10%",
+      "placed_orders": "12267",
+      "net_sales_inr": "62603190.0000",
+      "contribution_inr": "27704008.4900",
+      "mature_orders": "11445",
+      "mature_return_rate": "0.1138"
+    },
+    {
+      "discount_band": "11-20%",
+      "placed_orders": "7483",
+      "net_sales_inr": "35280483.0000",
+      "contribution_inr": "13877840.2200",
+      "mature_orders": "6878",
+      "mature_return_rate": "0.1240"
+    },
+    {
+      "discount_band": "21-30%",
+      "placed_orders": "2544",
+      "net_sales_inr": "9826720.0000",
+      "contribution_inr": "2770719.5700",
+      "mature_orders": "2143",
+      "mature_return_rate": "0.1619"
+    },
+    {
+      "discount_band": "No recognized sales",
+      "placed_orders": "1437",
+      "net_sales_inr": "0.0000",
+      "contribution_inr": "-36245.5300",
+      "mature_orders": "0",
+      "mature_return_rate": "NULL"
+    }
+  ],
+  [
+    {
+      "payment_method": "COD",
+      "status": "Cancelled",
+      "placed_orders": "337",
+      "service_cost_inr": "0.0000",
+      "contribution_inr": "0.0000"
+    },
+    {
+      "payment_method": "COD",
+      "status": "Delivered",
+      "placed_orders": "8849",
+      "service_cost_inr": "2745590.6800",
+      "contribution_inr": "18681645.8400"
+    },
+    {
+      "payment_method": "COD",
+      "status": "In transit",
+      "placed_orders": "112",
+      "service_cost_inr": "11989.2500",
+      "contribution_inr": "-11989.2500"
+    },
+    {
+      "payment_method": "Prepaid",
+      "status": "Cancelled",
+      "placed_orders": "744",
+      "service_cost_inr": "0.0000",
+      "contribution_inr": "0.0000"
+    },
+    {
+      "payment_method": "Prepaid",
+      "status": "Delivered",
+      "placed_orders": "19714",
+      "service_cost_inr": "4747845.4000",
+      "contribution_inr": "42657097.0600"
+    },
+    {
+      "payment_method": "Prepaid",
+      "status": "In transit",
+      "placed_orders": "244",
+      "service_cost_inr": "24256.2800",
+      "contribution_inr": "-24256.2800"
+    }
+  ],
+  [
+    {
+      "product_id": "102",
+      "product": "Apparel 02",
+      "recognized_units": "1889",
+      "delivered_item_orders": "1547",
+      "item_sales_before_refund_inr": "6988204.0000",
+      "item_merchandise_margin_inr": "3890244.0000"
+    },
+    {
+      "product_id": "103",
+      "product": "Apparel 03",
+      "recognized_units": "1963",
+      "delivered_item_orders": "1589",
+      "item_sales_before_refund_inr": "6569313.0000",
+      "item_merchandise_margin_inr": "3664073.0000"
+    },
+    {
+      "product_id": "101",
+      "product": "Apparel 01",
+      "recognized_units": "2032",
+      "delivered_item_orders": "1637",
+      "item_sales_before_refund_inr": "5878912.0000",
+      "item_merchandise_margin_inr": "3277952.0000"
+    },
+    {
+      "product_id": "110",
+      "product": "Apparel 10",
+      "recognized_units": "1948",
+      "delivered_item_orders": "1582",
+      "item_sales_before_refund_inr": "5457395.0000",
+      "item_merchandise_margin_inr": "3041875.0000"
+    },
+    {
+      "product_id": "108",
+      "product": "Apparel 08",
+      "recognized_units": "1902",
+      "delivered_item_orders": "1527",
+      "item_sales_before_refund_inr": "5154690.0000",
+      "item_merchandise_margin_inr": "2872290.0000"
+    },
+    {
+      "product_id": "104",
+      "product": "Apparel 04",
+      "recognized_units": "1938",
+      "delivered_item_orders": "1591",
+      "item_sales_before_refund_inr": "4903164.0000",
+      "item_merchandise_margin_inr": "2732604.0000"
+    },
+    {
+      "product_id": "207",
+      "product": "Beauty 07",
+      "recognized_units": "1257",
+      "delivered_item_orders": "1027",
+      "item_sales_before_refund_inr": "4646612.0000",
+      "item_merchandise_margin_inr": "3048965.0000"
+    },
+    {
+      "product_id": "208",
+      "product": "Beauty 08",
+      "recognized_units": "1222",
+      "delivered_item_orders": "982",
+      "item_sales_before_refund_inr": "4294251.0000",
+      "item_merchandise_margin_inr": "2816853.0000"
+    },
+    {
+      "product_id": "303",
+      "product": "Home 03",
+      "recognized_units": "1105",
+      "delivered_item_orders": "887",
+      "item_sales_before_refund_inr": "3987640.0000",
+      "item_merchandise_margin_inr": "1910240.0000"
+    },
+    {
+      "product_id": "203",
+      "product": "Beauty 03",
+      "recognized_units": "1329",
+      "delivered_item_orders": "1071",
+      "item_sales_before_refund_inr": "3947361.0000",
+      "item_merchandise_margin_inr": "2587794.0000"
+    },
+    {
+      "product_id": "312",
+      "product": "Home 12",
+      "recognized_units": "1038",
+      "delivered_item_orders": "849",
+      "item_sales_before_refund_inr": "3839158.0000",
+      "item_merchandise_margin_inr": "1838932.0000"
+    },
+    {
+      "product_id": "105",
+      "product": "Apparel 05",
+      "recognized_units": "1894",
+      "delivered_item_orders": "1555",
+      "item_sales_before_refund_inr": "3776894.0000",
+      "item_merchandise_margin_inr": "2110174.0000"
+    },
+    {
+      "product_id": "410",
+      "product": "Electronics 10",
+      "recognized_units": "941",
+      "delivered_item_orders": "765",
+      "item_sales_before_refund_inr": "3649625.0000",
+      "item_merchandise_margin_inr": "574437.0000"
+    },
+    {
+      "product_id": "311",
+      "product": "Home 11",
+      "recognized_units": "1026",
+      "delivered_item_orders": "860",
+      "item_sales_before_refund_inr": "3614130.0000",
+      "item_merchandise_margin_inr": "1733472.0000"
+    },
+    {
+      "product_id": "204",
+      "product": "Beauty 04",
+      "recognized_units": "1279",
+      "delivered_item_orders": "1020",
+      "item_sales_before_refund_inr": "3099384.0000",
+      "item_merchandise_margin_inr": "2028861.0000"
+    },
+    {
+      "product_id": "412",
+      "product": "Electronics 12",
+      "recognized_units": "895",
+      "delivered_item_orders": "721",
+      "item_sales_before_refund_inr": "2978722.0000",
+      "item_merchandise_margin_inr": "461982.0000"
+    },
+    {
+      "product_id": "205",
+      "product": "Beauty 05",
+      "recognized_units": "1312",
+      "delivered_item_orders": "1037",
+      "item_sales_before_refund_inr": "2957350.0000",
+      "item_merchandise_margin_inr": "1940550.0000"
+    },
+    {
+      "product_id": "508",
+      "product": "Wellness 08",
+      "recognized_units": "735",
+      "delivered_item_orders": "584",
+      "item_sales_before_refund_inr": "2903428.0000",
+      "item_merchandise_margin_inr": "1771528.0000"
+    },
+    {
+      "product_id": "411",
+      "product": "Electronics 11",
+      "recognized_units": "868",
+      "delivered_item_orders": "716",
+      "item_sales_before_refund_inr": "2900097.0000",
+      "item_merchandise_margin_inr": "459281.0000"
+    },
+    {
+      "product_id": "106",
+      "product": "Apparel 06",
+      "recognized_units": "1888",
+      "delivered_item_orders": "1545",
+      "item_sales_before_refund_inr": "2888011.0000",
+      "item_merchandise_margin_inr": "1604171.0000"
+    },
+    {
+      "product_id": "405",
+      "product": "Electronics 05",
+      "recognized_units": "884",
+      "delivered_item_orders": "717",
+      "item_sales_before_refund_inr": "2789815.0000",
+      "item_merchandise_margin_inr": "438375.0000"
+    },
+    {
+      "product_id": "304",
+      "product": "Home 04",
+      "recognized_units": "1044",
+      "delivered_item_orders": "854",
+      "item_sales_before_refund_inr": "2731829.0000",
+      "item_merchandise_margin_inr": "1308857.0000"
+    },
+    {
+      "product_id": "209",
+      "product": "Beauty 09",
+      "recognized_units": "1291",
+      "delivered_item_orders": "1031",
+      "item_sales_before_refund_inr": "2668391.0000",
+      "item_merchandise_margin_inr": "1747908.0000"
+    },
+    {
+      "product_id": "201",
+      "product": "Beauty 01",
+      "recognized_units": "1281",
+      "delivered_item_orders": "1044",
+      "item_sales_before_refund_inr": "2652015.0000",
+      "item_merchandise_margin_inr": "1738662.0000"
+    },
+    {
+      "product_id": "307",
+      "product": "Home 07",
+      "recognized_units": "1031",
+      "delivered_item_orders": "844",
+      "item_sales_before_refund_inr": "2615368.0000",
+      "item_merchandise_margin_inr": "1258572.0000"
+    },
+    {
+      "product_id": "511",
+      "product": "Wellness 11",
+      "recognized_units": "720",
+      "delivered_item_orders": "574",
+      "item_sales_before_refund_inr": "2599040.0000",
+      "item_merchandise_margin_inr": "1591040.0000"
+    },
+    {
+      "product_id": "407",
+      "product": "Electronics 07",
+      "recognized_units": "957",
+      "delivered_item_orders": "771",
+      "item_sales_before_refund_inr": "2593080.0000",
+      "item_merchandise_margin_inr": "411120.0000"
+    },
+    {
+      "product_id": "305",
+      "product": "Home 05",
+      "recognized_units": "1064",
+      "delivered_item_orders": "861",
+      "item_sales_before_refund_inr": "2583954.0000",
+      "item_merchandise_margin_inr": "1233738.0000"
+    },
+    {
+      "product_id": "404",
+      "product": "Electronics 04",
+      "recognized_units": "912",
+      "delivered_item_orders": "770",
+      "item_sales_before_refund_inr": "2551300.0000",
+      "item_merchandise_margin_inr": "402628.0000"
+    },
+    {
+      "product_id": "309",
+      "product": "Home 09",
+      "recognized_units": "1047",
+      "delivered_item_orders": "858",
+      "item_sales_before_refund_inr": "2536056.0000",
+      "item_merchandise_margin_inr": "1207413.0000"
+    },
+    {
+      "product_id": "308",
+      "product": "Home 08",
+      "recognized_units": "1037",
+      "delivered_item_orders": "860",
+      "item_sales_before_refund_inr": "2523528.0000",
+      "item_merchandise_margin_inr": "1207575.0000"
+    },
+    {
+      "product_id": "211",
+      "product": "Beauty 11",
+      "recognized_units": "1201",
+      "delivered_item_orders": "987",
+      "item_sales_before_refund_inr": "2487174.0000",
+      "item_merchandise_margin_inr": "1630861.0000"
+    },
+    {
+      "product_id": "302",
+      "product": "Home 02",
+      "recognized_units": "1052",
+      "delivered_item_orders": "862",
+      "item_sales_before_refund_inr": "2465294.0000",
+      "item_merchandise_margin_inr": "1179750.0000"
+    },
+    {
+      "product_id": "402",
+      "product": "Electronics 02",
+      "recognized_units": "1003",
+      "delivered_item_orders": "796",
+      "item_sales_before_refund_inr": "2356354.0000",
+      "item_merchandise_margin_inr": "374426.0000"
+    },
+    {
+      "product_id": "306",
+      "product": "Home 06",
+      "recognized_units": "1050",
+      "delivered_item_orders": "855",
+      "item_sales_before_refund_inr": "2280168.0000",
+      "item_merchandise_margin_inr": "1095768.0000"
+    },
+    {
+      "product_id": "408",
+      "product": "Electronics 08",
+      "recognized_units": "908",
+      "delivered_item_orders": "737",
+      "item_sales_before_refund_inr": "2206764.0000",
+      "item_merchandise_margin_inr": "343548.0000"
+    },
+    {
+      "product_id": "502",
+      "product": "Wellness 02",
+      "recognized_units": "706",
+      "delivered_item_orders": "558",
+      "item_sales_before_refund_inr": "2175150.0000",
+      "item_merchandise_margin_inr": "1335010.0000"
+    },
+    {
+      "product_id": "107",
+      "product": "Apparel 07",
+      "recognized_units": "1994",
+      "delivered_item_orders": "1623",
+      "item_sales_before_refund_inr": "2160000.0000",
+      "item_merchandise_margin_inr": "1202880.0000"
+    },
+    {
+      "product_id": "112",
+      "product": "Apparel 12",
+      "recognized_units": "1974",
+      "delivered_item_orders": "1590",
+      "item_sales_before_refund_inr": "2139780.0000",
+      "item_merchandise_margin_inr": "1192260.0000"
+    },
+    {
+      "product_id": "512",
+      "product": "Wellness 12",
+      "recognized_units": "704",
+      "delivered_item_orders": "574",
+      "item_sales_before_refund_inr": "2105961.0000",
+      "item_merchandise_margin_inr": "1292841.0000"
+    },
+    {
+      "product_id": "504",
+      "product": "Wellness 04",
+      "recognized_units": "686",
+      "delivered_item_orders": "560",
+      "item_sales_before_refund_inr": "2102900.0000",
+      "item_merchandise_margin_inr": "1286560.0000"
+    },
+    {
+      "product_id": "111",
+      "product": "Apparel 11",
+      "recognized_units": "1909",
+      "delivered_item_orders": "1530",
+      "item_sales_before_refund_inr": "2071836.0000",
+      "item_merchandise_margin_inr": "1155516.0000"
+    },
+    {
+      "product_id": "503",
+      "product": "Wellness 03",
+      "recognized_units": "670",
+      "delivered_item_orders": "549",
+      "item_sales_before_refund_inr": "2010591.0000",
+      "item_merchandise_margin_inr": "1236741.0000"
+    },
+    {
+      "product_id": "507",
+      "product": "Wellness 07",
+      "recognized_units": "752",
+      "delivered_item_orders": "597",
+      "item_sales_before_refund_inr": "1970753.0000",
+      "item_merchandise_margin_inr": "1207473.0000"
+    },
+    {
+      "product_id": "202",
+      "product": "Beauty 02",
+      "recognized_units": "1255",
+      "delivered_item_orders": "1033",
+      "item_sales_before_refund_inr": "1926797.0000",
+      "item_merchandise_margin_inr": "1265412.0000"
+    },
+    {
+      "product_id": "109",
+      "product": "Apparel 09",
+      "recognized_units": "1968",
+      "delivered_item_orders": "1599",
+      "item_sales_before_refund_inr": "1779660.0000",
+      "item_merchandise_margin_inr": "992460.0000"
+    },
+    {
+      "product_id": "509",
+      "product": "Wellness 09",
+      "recognized_units": "700",
+      "delivered_item_orders": "571",
+      "item_sales_before_refund_inr": "1720683.0000",
+      "item_merchandise_margin_inr": "1059183.0000"
+    },
+    {
+      "product_id": "505",
+      "product": "Wellness 05",
+      "recognized_units": "671",
+      "delivered_item_orders": "545",
+      "item_sales_before_refund_inr": "1692964.0000",
+      "item_merchandise_margin_inr": "1035384.0000"
+    },
+    {
+      "product_id": "206",
+      "product": "Beauty 06",
+      "recognized_units": "1293",
+      "delivered_item_orders": "1060",
+      "item_sales_before_refund_inr": "1628676.0000",
+      "item_merchandise_margin_inr": "1067514.0000"
+    },
+    {
+      "product_id": "403",
+      "product": "Electronics 03",
+      "recognized_units": "965",
+      "delivered_item_orders": "779",
+      "item_sales_before_refund_inr": "1566252.0000",
+      "item_merchandise_margin_inr": "246132.0000"
+    },
+    {
+      "product_id": "401",
+      "product": "Electronics 01",
+      "recognized_units": "906",
+      "delivered_item_orders": "754",
+      "item_sales_before_refund_inr": "1547037.0000",
+      "item_merchandise_margin_inr": "238773.0000"
+    },
+    {
+      "product_id": "501",
+      "product": "Wellness 01",
+      "recognized_units": "677",
+      "delivered_item_orders": "545",
+      "item_sales_before_refund_inr": "1485552.0000",
+      "item_merchandise_margin_inr": "916872.0000"
+    },
+    {
+      "product_id": "506",
+      "product": "Wellness 06",
+      "recognized_units": "690",
+      "delivered_item_orders": "539",
+      "item_sales_before_refund_inr": "1314033.0000",
+      "item_merchandise_margin_inr": "806883.0000"
+    },
+    {
+      "product_id": "301",
+      "product": "Home 01",
+      "recognized_units": "1053",
+      "delivered_item_orders": "860",
+      "item_sales_before_refund_inr": "1051292.0000",
+      "item_merchandise_margin_inr": "506891.0000"
+    },
+    {
+      "product_id": "210",
+      "product": "Beauty 10",
+      "recognized_units": "1285",
+      "delivered_item_orders": "1045",
+      "item_sales_before_refund_inr": "1037529.0000",
+      "item_merchandise_margin_inr": "679014.0000"
+    },
+    {
+      "product_id": "212",
+      "product": "Beauty 12",
+      "recognized_units": "1281",
+      "delivered_item_orders": "1015",
+      "item_sales_before_refund_inr": "807065.0000",
+      "item_merchandise_margin_inr": "529088.0000"
+    },
+    {
+      "product_id": "406",
+      "product": "Electronics 06",
+      "recognized_units": "895",
+      "delivered_item_orders": "735",
+      "item_sales_before_refund_inr": "562345.0000",
+      "item_merchandise_margin_inr": "86205.0000"
+    },
+    {
+      "product_id": "409",
+      "product": "Electronics 09",
+      "recognized_units": "932",
+      "delivered_item_orders": "761",
+      "item_sales_before_refund_inr": "504798.0000",
+      "item_merchandise_margin_inr": "79806.0000"
+    },
+    {
+      "product_id": "310",
+      "product": "Home 10",
+      "recognized_units": "1030",
+      "delivered_item_orders": "843",
+      "item_sales_before_refund_inr": "374084.0000",
+      "item_merchandise_margin_inr": "180444.0000"
+    },
+    {
+      "product_id": "510",
+      "product": "Wellness 10",
+      "recognized_units": "691",
+      "delivered_item_orders": "563",
+      "item_sales_before_refund_inr": "249596.0000",
+      "item_merchandise_margin_inr": "152856.0000"
+    }
+  ]
+]

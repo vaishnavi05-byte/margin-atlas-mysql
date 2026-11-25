@@ -117,7 +117,7 @@ table FactOrders
 		formatString: "INR "#,0;("INR "#,0);"INR "0
 		lineageTag: f8006ad5-ed97-4418-9acd-44cfea3fe626
 
-	measure 'Marketing Spend' = IF(ISFILTERED(DimCategory)||ISFILTERED(DimCustomer)||ISFILTERED(DimSegment)||ISFILTERED(FactOrders[order_id])||ISFILTERED(FactOrders[payment_method])||ISFILTERED(FactOrders[status]),BLANK(),DIVIDE(SUM(FactMarketing[spend_paise]),100))
+	measure 'Marketing Spend' = IF(ISFILTERED(DimProduct)||ISFILTERED(FactItems[product_id])||ISFILTERED(FactItems[order_id])||ISFILTERED(FactOrders[discount_band])||ISFILTERED(DimCategory)||ISFILTERED(DimCustomer)||ISFILTERED(DimSegment)||ISFILTERED(FactOrders[order_id])||ISFILTERED(FactOrders[payment_method])||ISFILTERED(FactOrders[status]),BLANK(),DIVIDE(SUM(FactMarketing[spend_paise]),100))
 		formatString: "INR "#,0;("INR "#,0);"INR "0
 		lineageTag: 17643567-3645-4637-9c15-880826ef575e
 
@@ -140,6 +140,106 @@ table FactOrders
 	measure 'Sensitivity Net Change' = [Scenario Return Cost Base] * DIVIDE(SELECTEDVALUE(SensitivityRecovery[Percent]),100) - [Scenario Intervention Cost]
 		formatString: "INR "#,0;("INR "#,0);"INR "0
 		lineageTag: 5943e514-372b-4b6f-8ff5-ebab1e2b151d
+
+	measure 'Gross Sales' = DIVIDE(SUM(FactOrders[gross_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: c8c3b474-91ec-4e38-b88d-677c70e369fa
+
+	measure 'Sales Before Refund' = [Gross Sales]-[Discounts]
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 6a67cdbc-60b3-4a7b-8fcc-6e0cd2e0335b
+
+	measure 'Discount Rate' = DIVIDE([Discounts],[Gross Sales])
+		formatString: 0.0%
+		lineageTag: f277977b-74d7-4333-99f4-c78db172ef95
+
+	measure 'Sales Per Delivered Order' = DIVIDE([Net Sales],[Delivery Eligible Orders])
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 957f065d-d8b3-4236-81c0-0f5f3d20a0e9
+
+	measure 'Contribution Per Placed Order' = DIVIDE([Contribution Before Marketing],[Orders])
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 3c4ff0fa-e599-49b7-8ee4-e84c948e43df
+
+	measure 'After Marketing Margin' = DIVIDE([Contribution After Marketing],[Net Sales])
+		formatString: 0.0%
+		lineageTag: cafe86f8-c198-40dc-8ef4-e6d6f426c5cc
+
+	measure 'Marketing Per Placed Order' = DIVIDE([Marketing Spend],[Orders])
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: b91d631f-701b-42c8-b44f-e9a5825cee08
+
+	measure 'Shipped Orders' = CALCULATE([Orders],KEEPFILTERS(FactOrders[status]<>"Cancelled"))
+		formatString: #,0
+		lineageTag: 967a1bc7-7669-4129-9423-630215608598
+
+	measure 'Cancelled Orders' = CALCULATE([Orders],KEEPFILTERS(FactOrders[status]="Cancelled"))
+		formatString: #,0
+		lineageTag: 9b41bd19-8ca0-4dc4-8a5f-9f31bc157e24
+
+	measure 'Cancellation Rate' = DIVIDE([Cancelled Orders],[Orders])
+		formatString: 0.0%
+		lineageTag: 41a633ba-0117-4951-815a-5d03ba4b1136
+
+	measure 'Fulfilment Per Shipped Order' = DIVIDE([Fulfilment],[Shipped Orders])
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 9defeba4-9f34-4b1d-be10-18ce055b4a70
+
+	measure 'Fees Per Delivered Order' = DIVIDE([Fees],[Delivery Eligible Orders])
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 0ccb00e8-e1b3-4e5a-aea2-266ef258b4d9
+
+	measure 'Variable Service Cost' = [Fulfilment]+[Fees]+[Reverse Logistics]
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: c5e11bac-ba33-4151-927c-7adfba424594
+
+	measure 'Service Cost Per Placed Order' = DIVIDE([Variable Service Cost],[Orders])
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 791f97f0-069a-4d17-bb88-0c1e2aeea330
+
+	measure 'Negative Order Rate' = DIVIDE([Negative Contribution Orders],[Orders])
+		formatString: 0.0%
+		lineageTag: 75846fb9-2ea0-4d93-bbbd-9c2ea09d9ad7
+
+	measure 'Observed Returned Orders' = SUM(FactOrders[return_flag])
+		formatString: #,0
+		lineageTag: d29bbc03-e2f1-412c-a296-f305bde100ca
+
+	measure 'Reverse Cost Per Returned Order' = DIVIDE([Reverse Logistics],[Observed Returned Orders])
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 5651075c-73c9-4285-a860-874702888eb3
+
+	measure 'Discounted Delivered Orders' = CALCULATE([Orders],KEEPFILTERS(FactOrders[delivery_eligible]=1),KEEPFILTERS(FactOrders[discount_paise]>0))
+		formatString: #,0
+		lineageTag: 2a073d38-e720-41e1-a479-700bc0f1bcf8
+
+	measure 'Item Sales Before Refund' = DIVIDE(SUM(FactItems[sales_before_refund_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: aa55d69c-021c-4ea8-9b45-807c2e880ee1
+
+	measure 'Item Product Cost' = DIVIDE(SUM(FactItems[cogs_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 307e9703-0f1b-4535-a775-d1a3caa4b05c
+
+	measure 'Item Merchandise Margin' = DIVIDE(SUM(FactItems[merchandise_margin_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 2b001cf5-b961-4e77-9529-62439e77f0f9
+
+	measure 'Item Merchandise Margin Rate' = DIVIDE([Item Merchandise Margin],[Item Sales Before Refund])
+		formatString: 0.0%
+		lineageTag: 01e46638-34b3-4c37-9267-6be581cc063d
+
+	measure 'Recognized Units' = SUM(FactItems[recognized_units])
+		formatString: #,0
+		lineageTag: 9b39aa33-e002-42d5-94b4-ecc809cf0bae
+
+	measure 'Delivered Item Orders' = CALCULATE(DISTINCTCOUNT(FactItems[order_id]),KEEPFILTERS(FactOrders[delivery_eligible]=1))
+		formatString: #,0
+		lineageTag: 95d53d7d-bb09-42b7-b6d0-b50cf56dc7e7
+
+	measure 'Units Per Item Order' = DIVIDE([Recognized Units],[Delivered Item Orders])
+		formatString: 0.00
+		lineageTag: 2b60eef6-6c2e-45d7-8e80-b831ddd74ef1
 
 	column order_id
 		dataType: string
@@ -408,7 +508,20 @@ table FactOrders
 
 		annotation SummarizationSetBy = Automatic
 
+	column discount_band
+		dataType: string
+		lineageTag: 8fc52d2a-e390-412f-9298-63a72e212224
+		summarizeBy: none
+		sourceColumn: discount_band
+		sortByColumn: discount_band_sort
+
+	column discount_band_sort
+		dataType: int64
+		lineageTag: 74fe7c82-0578-4624-927f-32230c49c933
+		summarizeBy: none
+		sourceColumn: discount_band_sort
+
 	partition FactOrders = m
 		mode: import
-		source = ReadCSV("FactOrders",{{"order_id",type text},{"customer_id",Int64.Type},{"order_date",type date},{"category_id",Int64.Type},{"channel_id",Int64.Type},{"payment_method",type text},{"promised_date",type date},{"delivered_date",type date},{"status",type text},{"gross_paise",Int64.Type},{"discount_paise",Int64.Type},{"refund_paise",Int64.Type},{"cogs_paise",Int64.Type},{"recovered_inventory_paise",Int64.Type},{"fulfilment_paise",Int64.Type},{"payment_fee_paise",Int64.Type},{"reverse_logistics_paise",Int64.Type},{"return_flag",Int64.Type},{"late_flag",Int64.Type},{"delivery_eligible",Int64.Type},{"return_mature",Int64.Type},{"new_customer",Int64.Type},{"net_sales_paise",Int64.Type},{"net_product_cost_paise",Int64.Type},{"contribution_before_marketing_paise",Int64.Type},{"month",type text},{"category",type text},{"channel",type text},{"region",type text},{"segment_key",type text},{"negative_order",Int64.Type},{"negative_contribution_paise",Int64.Type},{"mature_returns",Int64.Type},{"observed_return_cost_paise",Int64.Type},{"scenario_return_base_paise",Int64.Type},{"mature_late_orders",Int64.Type},{"delivery_days",Int64.Type}})
+		source = ReadCSV("FactOrders",{{"order_id",type text},{"customer_id",Int64.Type},{"order_date",type date},{"category_id",Int64.Type},{"channel_id",Int64.Type},{"payment_method",type text},{"promised_date",type date},{"delivered_date",type date},{"status",type text},{"gross_paise",Int64.Type},{"discount_paise",Int64.Type},{"refund_paise",Int64.Type},{"cogs_paise",Int64.Type},{"recovered_inventory_paise",Int64.Type},{"fulfilment_paise",Int64.Type},{"payment_fee_paise",Int64.Type},{"reverse_logistics_paise",Int64.Type},{"return_flag",Int64.Type},{"late_flag",Int64.Type},{"delivery_eligible",Int64.Type},{"return_mature",Int64.Type},{"new_customer",Int64.Type},{"net_sales_paise",Int64.Type},{"net_product_cost_paise",Int64.Type},{"contribution_before_marketing_paise",Int64.Type},{"month",type text},{"category",type text},{"channel",type text},{"region",type text},{"segment_key",type text},{"negative_order",Int64.Type},{"negative_contribution_paise",Int64.Type},{"mature_returns",Int64.Type},{"observed_return_cost_paise",Int64.Type},{"scenario_return_base_paise",Int64.Type},{"mature_late_orders",Int64.Type},{"delivery_days",Int64.Type},{"discount_band",type text},{"discount_band_sort",Int64.Type}})
 

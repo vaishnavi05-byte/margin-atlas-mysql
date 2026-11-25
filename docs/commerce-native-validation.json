@@ -1,0 +1,20 @@
+{
+  "native_commerce_dax_matches_independent_pandas": true,
+  "numeric_comparisons": 519,
+  "channel_groups": 5,
+  "discount_band_groups": 5,
+  "payment_groups": 2,
+  "products": 60,
+  "product_and_discount_marketing_guards": true,
+  "status_filter_intersection_verified": true,
+  "source_sha256": {
+    "dim_category.csv": "afdd4f3a2465e13070e2d1312cd3a90b40f00371db6d49097e097d47d024e2c1",
+    "dim_channel.csv": "37f819a690da77a39c2c0be9f136cc946b0d1bc3ecbfaa1a968324ed934ce57a",
+    "dim_customer.csv": "87e7832d0c144709a312af45e966cd3eb5b0e9e31013049c15ac456cff05c00f",
+    "dim_date.csv": "8b829469c71281115059e86f67f056b2468f5e9e1e7d762e93d0daccf1add463",
+    "dim_product.csv": "bedf6a638f05d7a241616342c2ece812bf1b6812b705615e02e6c938b79f1ce2",
+    "fact_marketing.csv": "e355d813f2ab604b37572ab06fbdc1cc894b32bea5468ecf1ff599dd72f3362f",
+    "fact_order_items.csv": "981f7ebe98dd153efa4bff68d2de0898af3c4f5461c708504c0f6f9cd404e377",
+    "fact_orders.csv": "7e279497d6cea0041660bf6420ed0cfd55a8852a40329f941cf00f41d455e25a"
+  }
+}

@@ -11,6 +11,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+from commerce_metrics import discount_band, enrich_items
 
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT = date(2026, 9, 30)
@@ -100,6 +101,7 @@ def enrich(raw_orders, customers, categories, channels):
         row['scenario_return_base_paise']=max(row['observed_return_cost_paise'],0)*row['mature_returns']
         row['mature_late_orders']=row['late_flag']*row['return_mature']
         row['delivery_days']=((delivered-ordered).days if delivered else '')
+        row['discount_band'],row['discount_band_sort']=discount_band(row['gross_paise'],row['discount_paise'])
         result.append(row)
     if not result:
         raise ValueError('No orders')
@@ -181,6 +183,11 @@ def build(source, minimum_sample=100):
     write_csv(out/'DimCategory.csv',inputs['dim_category.csv'])
     write_csv(out/'DimChannel.csv',inputs['dim_channel.csv'])
     write_csv(out/'DimCustomer.csv',inputs['dim_customer.csv'])
+    items=enrich_items(inputs['fact_order_items.csv'],orders,inputs['dim_product.csv'])
+    assert sum(r['sales_before_refund_paise'] for r in items)==sum(r['gross_paise']-r['discount_paise'] for r in orders)
+    assert sum(r['cogs_paise'] for r in items)==sum(r['cogs_paise'] for r in orders)
+    write_csv(out/'FactItems.csv',items)
+    write_csv(out/'DimProduct.csv',inputs['dim_product.csv'])
     marketing=[];media_seen=set(); known_channels=set(keyed(inputs['dim_channel.csv'],'channel_id'))
     for r in inputs['fact_marketing.csv']:
         item=dict(r)

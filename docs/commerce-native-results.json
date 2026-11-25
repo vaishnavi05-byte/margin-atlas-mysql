@@ -1,0 +1,787 @@
+[
+  {
+    "rows": [
+      {
+        "[Gross Sales]": 178454300.0,
+        "[Sales Before Refund]": 161059805.0,
+        "[Discount Rate]": 0.09747310656005487,
+        "[Sales Per Delivered Order]": 4993.274270909918,
+        "[Contribution Per Placed Order]": 2043.416579,
+        "[After Marketing Margin]": 0.4050404209652373,
+        "[Marketing Per Placed Order]": 117.81535833333334,
+        "[Shipped Orders]": 28919,
+        "[Cancelled Orders]": 1081,
+        "[Cancellation Rate]": 0.036033333333333334,
+        "[Fulfilment Per Shipped Order]": 99.06311214080709,
+        "[Fees Per Delivered Order]": 148.95030073871794,
+        "[Variable Service Cost]": 7529681.61,
+        "[Service Cost Per Placed Order]": 250.98938700000002,
+        "[Negative Order Rate]": 0.13863333333333333,
+        "[Observed Returned Orders]": 3290,
+        "[Reverse Cost Per Returned Order]": 124.74408206686931,
+        "[Discounted Delivered Orders]": 22294,
+        "[Item Sales Before Refund]": 161059805.0,
+        "[Item Product Cost]": 79771088.0,
+        "[Item Merchandise Margin]": 81288717.0,
+        "[Item Merchandise Margin Rate]": 0.5047113834516315,
+        "[Recognized Units]": 70630,
+        "[Delivered Item Orders]": 28563,
+        "[Units Per Item Order]": 2.4727794699436334
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "DimChannel[channel]": "Organic",
+        "[Orders]": 7270,
+        "[Net Sales]": 35844355.0,
+        "[Marketing Spend]": 0.0,
+        "[Contribution After Marketing]": 15987059.25,
+        "[After Marketing Margin]": 0.4460133053028852,
+        "[Marketing Per Placed Order]": 0.0
+      },
+      {
+        "DimChannel[channel]": "Paid Search",
+        "[Orders]": 8416,
+        "[Net Sales]": 41394535.0,
+        "[Marketing Spend]": 1281448.0,
+        "[Contribution After Marketing]": 16965833.63,
+        "[After Marketing Margin]": 0.4098568477698807,
+        "[Marketing Per Placed Order]": 152.26330798479088
+      },
+      {
+        "DimChannel[channel]": "Paid Social",
+        "[Orders]": 8118,
+        "[Net Sales]": 35097888.0,
+        "[Marketing Spend]": 1759828.75,
+        "[Contribution After Marketing]": 11777927.03,
+        "[After Marketing Margin]": 0.33557366842130215,
+        "[Marketing Per Placed Order]": 216.78107292436562
+      },
+      {
+        "DimChannel[channel]": "Email",
+        "[Orders]": 3727,
+        "[Net Sales]": 18034065.0,
+        "[Marketing Spend]": 206034.0,
+        "[Contribution After Marketing]": 7863571.72,
+        "[After Marketing Margin]": 0.43603989006361016,
+        "[Marketing Per Placed Order]": 55.281459618996514
+      },
+      {
+        "DimChannel[channel]": "Affiliate",
+        "[Orders]": 2469,
+        "[Net Sales]": 12252050.0,
+        "[Marketing Spend]": 287150.0,
+        "[Contribution After Marketing]": 5173644.99,
+        "[After Marketing Margin]": 0.42226770132345204,
+        "[Marketing Per Placed Order]": 116.302146618064
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "FactOrders[discount_band]": "0%",
+        "[Orders]": 6269,
+        "[Net Sales]": 34912500.0,
+        "[Contribution Before Marketing]": 16986174.62,
+        "[Mature Orders]": 5835,
+        "[Mature Return Rate]": 0.10968294772922023,
+        "[Negative Order Rate]": 0.10799170521614293
+      },
+      {
+        "FactOrders[discount_band]": "11-20%",
+        "[Orders]": 7483,
+        "[Net Sales]": 35280483.0,
+        "[Contribution Before Marketing]": 13877840.22,
+        "[Mature Orders]": 6878,
+        "[Mature Return Rate]": 0.12401861006106427,
+        "[Negative Order Rate]": 0.12976079112655353
+      },
+      {
+        "FactOrders[discount_band]": "1-10%",
+        "[Orders]": 12267,
+        "[Net Sales]": 62603190.0,
+        "[Contribution Before Marketing]": 27704008.49,
+        "[Mature Orders]": 11445,
+        "[Mature Return Rate]": 0.11384884228920926,
+        "[Negative Order Rate]": 0.11388277492459443
+      },
+      {
+        "FactOrders[discount_band]": "No recognized sales",
+        "[Orders]": 1437,
+        "[Net Sales]": 0.0,
+        "[Contribution Before Marketing]": -36245.53,
+        "[Mature Orders]": 0,
+        "[Mature Return Rate]": null,
+        "[Negative Order Rate]": 0.2477383437717467
+      },
+      {
+        "FactOrders[discount_band]": "21-30%",
+        "[Orders]": 2544,
+        "[Net Sales]": 9826720.0,
+        "[Contribution Before Marketing]": 2770719.57,
+        "[Mature Orders]": 2143,
+        "[Mature Return Rate]": 0.16192253849743352,
+        "[Negative Order Rate]": 0.2979559748427673
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "FactOrders[payment_method]": "Prepaid",
+        "[Orders]": 20702,
+        "[Shipped Orders]": 19958,
+        "[Cancelled Orders]": 744,
+        "[Cancellation Rate]": 0.03593855666119215,
+        "[Variable Service Cost]": 4772101.68,
+        "[Fulfilment Per Shipped Order]": 96.88291361859906,
+        "[Fees Per Delivered Order]": 129.55765750228264
+      },
+      {
+        "FactOrders[payment_method]": "COD",
+        "[Orders]": 9298,
+        "[Shipped Orders]": 8961,
+        "[Cancelled Orders]": 337,
+        "[Cancellation Rate]": 0.036244353624435365,
+        "[Variable Service Cost]": 2757579.93,
+        "[Fulfilment Per Shipped Order]": 103.9188650820221,
+        "[Fees Per Delivered Order]": 192.1536648208837
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "DimProduct[product_id]": 101,
+        "[Item Sales Before Refund]": 5878912.0,
+        "[Item Product Cost]": 2600960.0,
+        "[Item Merchandise Margin]": 3277952.0,
+        "[Item Merchandise Margin Rate]": 0.557578000827364,
+        "[Recognized Units]": 2032,
+        "[Delivered Item Orders]": 1637,
+        "[Units Per Item Order]": 1.2412950519242516
+      },
+      {
+        "DimProduct[product_id]": 102,
+        "[Item Sales Before Refund]": 6988204.0,
+        "[Item Product Cost]": 3097960.0,
+        "[Item Merchandise Margin]": 3890244.0,
+        "[Item Merchandise Margin Rate]": 0.5566872403839385,
+        "[Recognized Units]": 1889,
+        "[Delivered Item Orders]": 1547,
+        "[Units Per Item Order]": 1.2210730446024565
+      },
+      {
+        "DimProduct[product_id]": 103,
+        "[Item Sales Before Refund]": 6569313.0,
+        "[Item Product Cost]": 2905240.0,
+        "[Item Merchandise Margin]": 3664073.0,
+        "[Item Merchandise Margin Rate]": 0.5577558871072211,
+        "[Recognized Units]": 1963,
+        "[Delivered Item Orders]": 1589,
+        "[Units Per Item Order]": 1.2353681560730019
+      },
+      {
+        "DimProduct[product_id]": 104,
+        "[Item Sales Before Refund]": 4903164.0,
+        "[Item Product Cost]": 2170560.0,
+        "[Item Merchandise Margin]": 2732604.0,
+        "[Item Merchandise Margin Rate]": 0.5573144198317658,
+        "[Recognized Units]": 1938,
+        "[Delivered Item Orders]": 1591,
+        "[Units Per Item Order]": 1.2181018227529856
+      },
+      {
+        "DimProduct[product_id]": 105,
+        "[Item Sales Before Refund]": 3776894.0,
+        "[Item Product Cost]": 1666720.0,
+        "[Item Merchandise Margin]": 2110174.0,
+        "[Item Merchandise Margin Rate]": 0.5587061749681087,
+        "[Recognized Units]": 1894,
+        "[Delivered Item Orders]": 1555,
+        "[Units Per Item Order]": 1.2180064308681673
+      },
+      {
+        "DimProduct[product_id]": 106,
+        "[Item Sales Before Refund]": 2888011.0,
+        "[Item Product Cost]": 1283840.0,
+        "[Item Merchandise Margin]": 1604171.0,
+        "[Item Merchandise Margin Rate]": 0.5554587569091669,
+        "[Recognized Units]": 1888,
+        "[Delivered Item Orders]": 1545,
+        "[Units Per Item Order]": 1.2220064724919093
+      },
+      {
+        "DimProduct[product_id]": 107,
+        "[Item Sales Before Refund]": 2160000.0,
+        "[Item Product Cost]": 957120.0,
+        "[Item Merchandise Margin]": 1202880.0,
+        "[Item Merchandise Margin Rate]": 0.5568888888888889,
+        "[Recognized Units]": 1994,
+        "[Delivered Item Orders]": 1623,
+        "[Units Per Item Order]": 1.2285890326555762
+      },
+      {
+        "DimProduct[product_id]": 108,
+        "[Item Sales Before Refund]": 5154690.0,
+        "[Item Product Cost]": 2282400.0,
+        "[Item Merchandise Margin]": 2872290.0,
+        "[Item Merchandise Margin Rate]": 0.557218765822969,
+        "[Recognized Units]": 1902,
+        "[Delivered Item Orders]": 1527,
+        "[Units Per Item Order]": 1.2455795677799608
+      },
+      {
+        "DimProduct[product_id]": 109,
+        "[Item Sales Before Refund]": 1779660.0,
+        "[Item Product Cost]": 787200.0,
+        "[Item Merchandise Margin]": 992460.0,
+        "[Item Merchandise Margin Rate]": 0.5576683186676107,
+        "[Recognized Units]": 1968,
+        "[Delivered Item Orders]": 1599,
+        "[Units Per Item Order]": 1.2307692307692308
+      },
+      {
+        "DimProduct[product_id]": 110,
+        "[Item Sales Before Refund]": 5457395.0,
+        "[Item Product Cost]": 2415520.0,
+        "[Item Merchandise Margin]": 3041875.0,
+        "[Item Merchandise Margin Rate]": 0.55738589565168,
+        "[Recognized Units]": 1948,
+        "[Delivered Item Orders]": 1582,
+        "[Units Per Item Order]": 1.2313527180783819
+      },
+      {
+        "DimProduct[product_id]": 111,
+        "[Item Sales Before Refund]": 2071836.0,
+        "[Item Product Cost]": 916320.0,
+        "[Item Merchandise Margin]": 1155516.0,
+        "[Item Merchandise Margin Rate]": 0.5577256114866235,
+        "[Recognized Units]": 1909,
+        "[Delivered Item Orders]": 1530,
+        "[Units Per Item Order]": 1.2477124183006536
+      },
+      {
+        "DimProduct[product_id]": 112,
+        "[Item Sales Before Refund]": 2139780.0,
+        "[Item Product Cost]": 947520.0,
+        "[Item Merchandise Margin]": 1192260.0,
+        "[Item Merchandise Margin Rate]": 0.557188122143398,
+        "[Recognized Units]": 1974,
+        "[Delivered Item Orders]": 1590,
+        "[Units Per Item Order]": 1.241509433962264
+      },
+      {
+        "DimProduct[product_id]": 201,
+        "[Item Sales Before Refund]": 2652015.0,
+        "[Item Product Cost]": 913353.0,
+        "[Item Merchandise Margin]": 1738662.0,
+        "[Item Merchandise Margin Rate]": 0.6556003642513334,
+        "[Recognized Units]": 1281,
+        "[Delivered Item Orders]": 1044,
+        "[Units Per Item Order]": 1.2270114942528736
+      },
+      {
+        "DimProduct[product_id]": 202,
+        "[Item Sales Before Refund]": 1926797.0,
+        "[Item Product Cost]": 661385.0,
+        "[Item Merchandise Margin]": 1265412.0,
+        "[Item Merchandise Margin Rate]": 0.6567438085070716,
+        "[Recognized Units]": 1255,
+        "[Delivered Item Orders]": 1033,
+        "[Units Per Item Order]": 1.2149080348499517
+      },
+      {
+        "DimProduct[product_id]": 203,
+        "[Item Sales Before Refund]": 3947361.0,
+        "[Item Product Cost]": 1359567.0,
+        "[Item Merchandise Margin]": 2587794.0,
+        "[Item Merchandise Margin Rate]": 0.6555757124823395,
+        "[Recognized Units]": 1329,
+        "[Delivered Item Orders]": 1071,
+        "[Units Per Item Order]": 1.2408963585434174
+      },
+      {
+        "DimProduct[product_id]": 204,
+        "[Item Sales Before Refund]": 3099384.0,
+        "[Item Product Cost]": 1070523.0,
+        "[Item Merchandise Margin]": 2028861.0,
+        "[Item Merchandise Margin Rate]": 0.6546013659488467,
+        "[Recognized Units]": 1279,
+        "[Delivered Item Orders]": 1020,
+        "[Units Per Item Order]": 1.253921568627451
+      },
+      {
+        "DimProduct[product_id]": 205,
+        "[Item Sales Before Refund]": 2957350.0,
+        "[Item Product Cost]": 1016800.0,
+        "[Item Merchandise Margin]": 1940550.0,
+        "[Item Merchandise Margin Rate]": 0.6561786734745634,
+        "[Recognized Units]": 1312,
+        "[Delivered Item Orders]": 1037,
+        "[Units Per Item Order]": 1.2651880424300868
+      },
+      {
+        "DimProduct[product_id]": 206,
+        "[Item Sales Before Refund]": 1628676.0,
+        "[Item Product Cost]": 561162.0,
+        "[Item Merchandise Margin]": 1067514.0,
+        "[Item Merchandise Margin Rate]": 0.6554489659085049,
+        "[Recognized Units]": 1293,
+        "[Delivered Item Orders]": 1060,
+        "[Units Per Item Order]": 1.219811320754717
+      },
+      {
+        "DimProduct[product_id]": 207,
+        "[Item Sales Before Refund]": 4646612.0,
+        "[Item Product Cost]": 1597647.0,
+        "[Item Merchandise Margin]": 3048965.0,
+        "[Item Merchandise Margin Rate]": 0.6561694843468747,
+        "[Recognized Units]": 1257,
+        "[Delivered Item Orders]": 1027,
+        "[Units Per Item Order]": 1.2239532619279454
+      },
+      {
+        "DimProduct[product_id]": 208,
+        "[Item Sales Before Refund]": 4294251.0,
+        "[Item Product Cost]": 1477398.0,
+        "[Item Merchandise Margin]": 2816853.0,
+        "[Item Merchandise Margin Rate]": 0.6559590950785131,
+        "[Recognized Units]": 1222,
+        "[Delivered Item Orders]": 982,
+        "[Units Per Item Order]": 1.244399185336049
+      },
+      {
+        "DimProduct[product_id]": 209,
+        "[Item Sales Before Refund]": 2668391.0,
+        "[Item Product Cost]": 920483.0,
+        "[Item Merchandise Margin]": 1747908.0,
+        "[Item Merchandise Margin Rate]": 0.6550419335097443,
+        "[Recognized Units]": 1291,
+        "[Delivered Item Orders]": 1031,
+        "[Units Per Item Order]": 1.2521823472356934
+      },
+      {
+        "DimProduct[product_id]": 210,
+        "[Item Sales Before Refund]": 1037529.0,
+        "[Item Product Cost]": 358515.0,
+        "[Item Merchandise Margin]": 679014.0,
+        "[Item Merchandise Margin Rate]": 0.6544530321562096,
+        "[Recognized Units]": 1285,
+        "[Delivered Item Orders]": 1045,
+        "[Units Per Item Order]": 1.229665071770335
+      },
+      {
+        "DimProduct[product_id]": 211,
+        "[Item Sales Before Refund]": 2487174.0,
+        "[Item Product Cost]": 856313.0,
+        "[Item Merchandise Margin]": 1630861.0,
+        "[Item Merchandise Margin Rate]": 0.6557084466145111,
+        "[Recognized Units]": 1201,
+        "[Delivered Item Orders]": 987,
+        "[Units Per Item Order]": 1.2168186423505571
+      },
+      {
+        "DimProduct[product_id]": 212,
+        "[Item Sales Before Refund]": 807065.0,
+        "[Item Product Cost]": 277977.0,
+        "[Item Merchandise Margin]": 529088.0,
+        "[Item Merchandise Margin Rate]": 0.6555704930829611,
+        "[Recognized Units]": 1281,
+        "[Delivered Item Orders]": 1015,
+        "[Units Per Item Order]": 1.2620689655172415
+      },
+      {
+        "DimProduct[product_id]": 301,
+        "[Item Sales Before Refund]": 1051292.0,
+        "[Item Product Cost]": 544401.0,
+        "[Item Merchandise Margin]": 506891.0,
+        "[Item Merchandise Margin Rate]": 0.48216004687565395,
+        "[Recognized Units]": 1053,
+        "[Delivered Item Orders]": 860,
+        "[Units Per Item Order]": 1.2244186046511627
+      },
+      {
+        "DimProduct[product_id]": 302,
+        "[Item Sales Before Refund]": 2465294.0,
+        "[Item Product Cost]": 1285544.0,
+        "[Item Merchandise Margin]": 1179750.0,
+        "[Item Merchandise Margin Rate]": 0.4785433299233276,
+        "[Recognized Units]": 1052,
+        "[Delivered Item Orders]": 862,
+        "[Units Per Item Order]": 1.2204176334106729
+      },
+      {
+        "DimProduct[product_id]": 303,
+        "[Item Sales Before Refund]": 3987640.0,
+        "[Item Product Cost]": 2077400.0,
+        "[Item Merchandise Margin]": 1910240.0,
+        "[Item Merchandise Margin Rate]": 0.47904023432406134,
+        "[Recognized Units]": 1105,
+        "[Delivered Item Orders]": 887,
+        "[Units Per Item Order]": 1.245772266065389
+      },
+      {
+        "DimProduct[product_id]": 304,
+        "[Item Sales Before Refund]": 2731829.0,
+        "[Item Product Cost]": 1422972.0,
+        "[Item Merchandise Margin]": 1308857.0,
+        "[Item Merchandise Margin Rate]": 0.4791138098321674,
+        "[Recognized Units]": 1044,
+        "[Delivered Item Orders]": 854,
+        "[Units Per Item Order]": 1.2224824355971897
+      },
+      {
+        "DimProduct[product_id]": 305,
+        "[Item Sales Before Refund]": 2583954.0,
+        "[Item Product Cost]": 1350216.0,
+        "[Item Merchandise Margin]": 1233738.0,
+        "[Item Merchandise Margin Rate]": 0.4774612860755261,
+        "[Recognized Units]": 1064,
+        "[Delivered Item Orders]": 861,
+        "[Units Per Item Order]": 1.2357723577235773
+      },
+      {
+        "DimProduct[product_id]": 306,
+        "[Item Sales Before Refund]": 2280168.0,
+        "[Item Product Cost]": 1184400.0,
+        "[Item Merchandise Margin]": 1095768.0,
+        "[Item Merchandise Margin Rate]": 0.4805645899775806,
+        "[Recognized Units]": 1050,
+        "[Delivered Item Orders]": 855,
+        "[Units Per Item Order]": 1.2280701754385965
+      },
+      {
+        "DimProduct[product_id]": 307,
+        "[Item Sales Before Refund]": 2615368.0,
+        "[Item Product Cost]": 1356796.0,
+        "[Item Merchandise Margin]": 1258572.0,
+        "[Item Merchandise Margin Rate]": 0.48122176305590647,
+        "[Recognized Units]": 1031,
+        "[Delivered Item Orders]": 844,
+        "[Units Per Item Order]": 1.221563981042654
+      },
+      {
+        "DimProduct[product_id]": 308,
+        "[Item Sales Before Refund]": 2523528.0,
+        "[Item Product Cost]": 1315953.0,
+        "[Item Merchandise Margin]": 1207575.0,
+        "[Item Merchandise Margin Rate]": 0.47852649148335186,
+        "[Recognized Units]": 1037,
+        "[Delivered Item Orders]": 860,
+        "[Units Per Item Order]": 1.205813953488372
+      },
+      {
+        "DimProduct[product_id]": 309,
+        "[Item Sales Before Refund]": 2536056.0,
+        "[Item Product Cost]": 1328643.0,
+        "[Item Merchandise Margin]": 1207413.0,
+        "[Item Merchandise Margin Rate]": 0.4760987139085257,
+        "[Recognized Units]": 1047,
+        "[Delivered Item Orders]": 858,
+        "[Units Per Item Order]": 1.2202797202797202
+      },
+      {
+        "DimProduct[product_id]": 310,
+        "[Item Sales Before Refund]": 374084.0,
+        "[Item Product Cost]": 193640.0,
+        "[Item Merchandise Margin]": 180444.0,
+        "[Item Merchandise Margin Rate]": 0.48236225018979695,
+        "[Recognized Units]": 1030,
+        "[Delivered Item Orders]": 843,
+        "[Units Per Item Order]": 1.2218268090154212
+      },
+      {
+        "DimProduct[product_id]": 311,
+        "[Item Sales Before Refund]": 3614130.0,
+        "[Item Product Cost]": 1880658.0,
+        "[Item Merchandise Margin]": 1733472.0,
+        "[Item Merchandise Margin Rate]": 0.4796374231142765,
+        "[Recognized Units]": 1026,
+        "[Delivered Item Orders]": 860,
+        "[Units Per Item Order]": 1.1930232558139535
+      },
+      {
+        "DimProduct[product_id]": 312,
+        "[Item Sales Before Refund]": 3839158.0,
+        "[Item Product Cost]": 2000226.0,
+        "[Item Merchandise Margin]": 1838932.0,
+        "[Item Merchandise Margin Rate]": 0.4789935709861381,
+        "[Recognized Units]": 1038,
+        "[Delivered Item Orders]": 849,
+        "[Units Per Item Order]": 1.2226148409893993
+      },
+      {
+        "DimProduct[product_id]": 401,
+        "[Item Sales Before Refund]": 1547037.0,
+        "[Item Product Cost]": 1308264.0,
+        "[Item Merchandise Margin]": 238773.0,
+        "[Item Merchandise Margin Rate]": 0.15434213919899784,
+        "[Recognized Units]": 906,
+        "[Delivered Item Orders]": 754,
+        "[Units Per Item Order]": 1.2015915119363396
+      },
+      {
+        "DimProduct[product_id]": 402,
+        "[Item Sales Before Refund]": 2356354.0,
+        "[Item Product Cost]": 1981928.0,
+        "[Item Merchandise Margin]": 374426.0,
+        "[Item Merchandise Margin Rate]": 0.15890057266437896,
+        "[Recognized Units]": 1003,
+        "[Delivered Item Orders]": 796,
+        "[Units Per Item Order]": 1.2600502512562815
+      },
+      {
+        "DimProduct[product_id]": 403,
+        "[Item Sales Before Refund]": 1566252.0,
+        "[Item Product Cost]": 1320120.0,
+        "[Item Merchandise Margin]": 246132.0,
+        "[Item Merchandise Margin Rate]": 0.15714712574987932,
+        "[Recognized Units]": 965,
+        "[Delivered Item Orders]": 779,
+        "[Units Per Item Order]": 1.238767650834403
+      },
+      {
+        "DimProduct[product_id]": 404,
+        "[Item Sales Before Refund]": 2551300.0,
+        "[Item Product Cost]": 2148672.0,
+        "[Item Merchandise Margin]": 402628.0,
+        "[Item Merchandise Margin Rate]": 0.15781287970838395,
+        "[Recognized Units]": 912,
+        "[Delivered Item Orders]": 770,
+        "[Units Per Item Order]": 1.1844155844155844
+      },
+      {
+        "DimProduct[product_id]": 405,
+        "[Item Sales Before Refund]": 2789815.0,
+        "[Item Product Cost]": 2351440.0,
+        "[Item Merchandise Margin]": 438375.0,
+        "[Item Merchandise Margin Rate]": 0.15713407519853467,
+        "[Recognized Units]": 884,
+        "[Delivered Item Orders]": 717,
+        "[Units Per Item Order]": 1.2329149232914924
+      },
+      {
+        "DimProduct[product_id]": 406,
+        "[Item Sales Before Refund]": 562345.0,
+        "[Item Product Cost]": 476140.0,
+        "[Item Merchandise Margin]": 86205.0,
+        "[Item Merchandise Margin Rate]": 0.1532955747806062,
+        "[Recognized Units]": 895,
+        "[Delivered Item Orders]": 735,
+        "[Units Per Item Order]": 1.217687074829932
+      },
+      {
+        "DimProduct[product_id]": 407,
+        "[Item Sales Before Refund]": 2593080.0,
+        "[Item Product Cost]": 2181960.0,
+        "[Item Merchandise Margin]": 411120.0,
+        "[Item Merchandise Margin Rate]": 0.15854505067333055,
+        "[Recognized Units]": 957,
+        "[Delivered Item Orders]": 771,
+        "[Units Per Item Order]": 1.2412451361867705
+      },
+      {
+        "DimProduct[product_id]": 408,
+        "[Item Sales Before Refund]": 2206764.0,
+        "[Item Product Cost]": 1863216.0,
+        "[Item Merchandise Margin]": 343548.0,
+        "[Item Merchandise Margin Rate]": 0.15567953800225126,
+        "[Recognized Units]": 908,
+        "[Delivered Item Orders]": 737,
+        "[Units Per Item Order]": 1.2320217096336499
+      },
+      {
+        "DimProduct[product_id]": 409,
+        "[Item Sales Before Refund]": 504798.0,
+        "[Item Product Cost]": 424992.0,
+        "[Item Merchandise Margin]": 79806.0,
+        "[Item Merchandise Margin Rate]": 0.15809492113677154,
+        "[Recognized Units]": 932,
+        "[Delivered Item Orders]": 761,
+        "[Units Per Item Order]": 1.2247043363994743
+      },
+      {
+        "DimProduct[product_id]": 410,
+        "[Item Sales Before Refund]": 3649625.0,
+        "[Item Product Cost]": 3075188.0,
+        "[Item Merchandise Margin]": 574437.0,
+        "[Item Merchandise Margin Rate]": 0.1573961708394698,
+        "[Recognized Units]": 941,
+        "[Delivered Item Orders]": 765,
+        "[Units Per Item Order]": 1.2300653594771243
+      },
+      {
+        "DimProduct[product_id]": 411,
+        "[Item Sales Before Refund]": 2900097.0,
+        "[Item Product Cost]": 2440816.0,
+        "[Item Merchandise Margin]": 459281.0,
+        "[Item Merchandise Margin Rate]": 0.15836746150214975,
+        "[Recognized Units]": 868,
+        "[Delivered Item Orders]": 716,
+        "[Units Per Item Order]": 1.2122905027932962
+      },
+      {
+        "DimProduct[product_id]": 412,
+        "[Item Sales Before Refund]": 2978722.0,
+        "[Item Product Cost]": 2516740.0,
+        "[Item Merchandise Margin]": 461982.0,
+        "[Item Merchandise Margin Rate]": 0.15509403025861426,
+        "[Recognized Units]": 895,
+        "[Delivered Item Orders]": 721,
+        "[Units Per Item Order]": 1.2413314840499305
+      },
+      {
+        "DimProduct[product_id]": 501,
+        "[Item Sales Before Refund]": 1485552.0,
+        "[Item Product Cost]": 568680.0,
+        "[Item Merchandise Margin]": 916872.0,
+        "[Item Merchandise Margin Rate]": 0.6171928010598081,
+        "[Recognized Units]": 677,
+        "[Delivered Item Orders]": 545,
+        "[Units Per Item Order]": 1.2422018348623853
+      },
+      {
+        "DimProduct[product_id]": 502,
+        "[Item Sales Before Refund]": 2175150.0,
+        "[Item Product Cost]": 840140.0,
+        "[Item Merchandise Margin]": 1335010.0,
+        "[Item Merchandise Margin Rate]": 0.6137553731926534,
+        "[Recognized Units]": 706,
+        "[Delivered Item Orders]": 558,
+        "[Units Per Item Order]": 1.2652329749103943
+      },
+      {
+        "DimProduct[product_id]": 503,
+        "[Item Sales Before Refund]": 2010591.0,
+        "[Item Product Cost]": 773850.0,
+        "[Item Merchandise Margin]": 1236741.0,
+        "[Item Merchandise Margin Rate]": 0.6151131682177031,
+        "[Recognized Units]": 670,
+        "[Delivered Item Orders]": 549,
+        "[Units Per Item Order]": 1.2204007285974499
+      },
+      {
+        "DimProduct[product_id]": 504,
+        "[Item Sales Before Refund]": 2102900.0,
+        "[Item Product Cost]": 816340.0,
+        "[Item Merchandise Margin]": 1286560.0,
+        "[Item Merchandise Margin Rate]": 0.6118027485852869,
+        "[Recognized Units]": 686,
+        "[Delivered Item Orders]": 560,
+        "[Units Per Item Order]": 1.225
+      },
+      {
+        "DimProduct[product_id]": 505,
+        "[Item Sales Before Refund]": 1692964.0,
+        "[Item Product Cost]": 657580.0,
+        "[Item Merchandise Margin]": 1035384.0,
+        "[Item Merchandise Margin Rate]": 0.6115806360914939,
+        "[Recognized Units]": 671,
+        "[Delivered Item Orders]": 545,
+        "[Units Per Item Order]": 1.2311926605504586
+      },
+      {
+        "DimProduct[product_id]": 506,
+        "[Item Sales Before Refund]": 1314033.0,
+        "[Item Product Cost]": 507150.0,
+        "[Item Merchandise Margin]": 806883.0,
+        "[Item Merchandise Margin Rate]": 0.6140507886788231,
+        "[Recognized Units]": 690,
+        "[Delivered Item Orders]": 539,
+        "[Units Per Item Order]": 1.280148423005566
+      },
+      {
+        "DimProduct[product_id]": 507,
+        "[Item Sales Before Refund]": 1970753.0,
+        "[Item Product Cost]": 763280.0,
+        "[Item Merchandise Margin]": 1207473.0,
+        "[Item Merchandise Margin Rate]": 0.6126962638138823,
+        "[Recognized Units]": 752,
+        "[Delivered Item Orders]": 597,
+        "[Units Per Item Order]": 1.2596314907872697
+      },
+      {
+        "DimProduct[product_id]": 508,
+        "[Item Sales Before Refund]": 2903428.0,
+        "[Item Product Cost]": 1131900.0,
+        "[Item Merchandise Margin]": 1771528.0,
+        "[Item Merchandise Margin Rate]": 0.6101504841862792,
+        "[Recognized Units]": 735,
+        "[Delivered Item Orders]": 584,
+        "[Units Per Item Order]": 1.2585616438356164
+      },
+      {
+        "DimProduct[product_id]": 509,
+        "[Item Sales Before Refund]": 1720683.0,
+        "[Item Product Cost]": 661500.0,
+        "[Item Merchandise Margin]": 1059183.0,
+        "[Item Merchandise Margin Rate]": 0.6155596353308541,
+        "[Recognized Units]": 700,
+        "[Delivered Item Orders]": 571,
+        "[Units Per Item Order]": 1.2259194395796849
+      },
+      {
+        "DimProduct[product_id]": 510,
+        "[Item Sales Before Refund]": 249596.0,
+        "[Item Product Cost]": 96740.0,
+        "[Item Merchandise Margin]": 152856.0,
+        "[Item Merchandise Margin Rate]": 0.6124136604753281,
+        "[Recognized Units]": 691,
+        "[Delivered Item Orders]": 563,
+        "[Units Per Item Order]": 1.2273534635879217
+      },
+      {
+        "DimProduct[product_id]": 511,
+        "[Item Sales Before Refund]": 2599040.0,
+        "[Item Product Cost]": 1008000.0,
+        "[Item Merchandise Margin]": 1591040.0,
+        "[Item Merchandise Margin Rate]": 0.6121644915045555,
+        "[Recognized Units]": 720,
+        "[Delivered Item Orders]": 574,
+        "[Units Per Item Order]": 1.254355400696864
+      },
+      {
+        "DimProduct[product_id]": 512,
+        "[Item Sales Before Refund]": 2105961.0,
+        "[Item Product Cost]": 813120.0,
+        "[Item Merchandise Margin]": 1292841.0,
+        "[Item Merchandise Margin Rate]": 0.6138959838287603,
+        "[Recognized Units]": 704,
+        "[Delivered Item Orders]": 574,
+        "[Units Per Item Order]": 1.2264808362369337
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "[Marketing Must Be Blank]": null,
+        "[After Marketing Must Be Blank]": null,
+        "[Item Sales Before Refund]": 5878912.0,
+        "[Orders Stay At Order Grain]": 30000
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "[Marketing Must Be Blank]": null,
+        "[After Marketing Must Be Blank]": null
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "[Cancelled Orders]": null,
+        "[Cancellation Rate]": null,
+        "[Shipped Orders]": 28563,
+        "[Fulfilment Per Shipped Order]": 99.0288348562826
+      }
+    ]
+  }
+]

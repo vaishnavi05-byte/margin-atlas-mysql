@@ -77,4 +77,7 @@ def run():
     (ROOT/'notebooks/01_profitability_investigation.ipynb').write_text(json.dumps({'cells':notebook,'metadata':{'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.12'}},'nbformat':4,'nbformat_minor':5},indent=2),encoding='utf-8')
     print('Executed independent pandas review and saved notebook outputs.')
 
-if __name__=='__main__':run()
+if __name__=='__main__':
+    run()
+    from analyze_commerce import run as review_commerce
+    review_commerce()

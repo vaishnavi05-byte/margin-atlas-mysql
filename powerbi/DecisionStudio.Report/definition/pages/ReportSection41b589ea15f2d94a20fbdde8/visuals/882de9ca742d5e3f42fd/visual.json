@@ -83,7 +83,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "s",
+                    "Name": "m",
                     "Entity": "Metric",
                     "Type": 0
                   }
@@ -97,7 +97,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "s"
+                                  "Source": "m"
                                 }
                               },
                               "Property": "Label"

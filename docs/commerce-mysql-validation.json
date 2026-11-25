@@ -1,0 +1,7 @@
+{
+  "executed_selects": 4,
+  "numeric_comparisons": 302,
+  "all_commerce_sql_results_match_independent_source_review": true,
+  "database": "decision_studio",
+  "isolation": "Temporary loopback QA server, port 3307; original database unchanged"
+}

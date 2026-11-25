@@ -86,7 +86,7 @@ Break Even Cost Per Mature Order =
 DIVIDE([Modeled Avoided Return Cost],[Mature Orders])
 
 Marketing Spend =
-IF(ISFILTERED(DimCategory)||ISFILTERED(DimCustomer)||ISFILTERED(DimSegment)||ISFILTERED(FactOrders[order_id])||ISFILTERED(FactOrders[payment_method])||ISFILTERED(FactOrders[status]),BLANK(),DIVIDE(SUM(FactMarketing[spend_paise]),100))
+IF(ISFILTERED(DimProduct)||ISFILTERED(FactItems[product_id])||ISFILTERED(FactItems[order_id])||ISFILTERED(FactOrders[discount_band])||ISFILTERED(DimCategory)||ISFILTERED(DimCustomer)||ISFILTERED(DimSegment)||ISFILTERED(FactOrders[order_id])||ISFILTERED(FactOrders[payment_method])||ISFILTERED(FactOrders[status]),BLANK(),DIVIDE(SUM(FactMarketing[spend_paise]),100))
 
 Contribution After Marketing =
 IF(NOT ISBLANK([Marketing Spend]),[Contribution Before Marketing]-[Marketing Spend])
@@ -102,3 +102,78 @@ DIVIDE([Repeat Customers 90d],[Eligible Cohort Customers])
 
 Sensitivity Net Change =
 [Scenario Return Cost Base] * DIVIDE(SELECTEDVALUE(SensitivityRecovery[Percent]),100) - [Scenario Intervention Cost]
+
+Gross Sales =
+DIVIDE(SUM(FactOrders[gross_paise]),100)
+
+Sales Before Refund =
+[Gross Sales]-[Discounts]
+
+Discount Rate =
+DIVIDE([Discounts],[Gross Sales])
+
+Sales Per Delivered Order =
+DIVIDE([Net Sales],[Delivery Eligible Orders])
+
+Contribution Per Placed Order =
+DIVIDE([Contribution Before Marketing],[Orders])
+
+After Marketing Margin =
+DIVIDE([Contribution After Marketing],[Net Sales])
+
+Marketing Per Placed Order =
+DIVIDE([Marketing Spend],[Orders])
+
+Shipped Orders =
+CALCULATE([Orders],KEEPFILTERS(FactOrders[status]<>"Cancelled"))
+
+Cancelled Orders =
+CALCULATE([Orders],KEEPFILTERS(FactOrders[status]="Cancelled"))
+
+Cancellation Rate =
+DIVIDE([Cancelled Orders],[Orders])
+
+Fulfilment Per Shipped Order =
+DIVIDE([Fulfilment],[Shipped Orders])
+
+Fees Per Delivered Order =
+DIVIDE([Fees],[Delivery Eligible Orders])
+
+Variable Service Cost =
+[Fulfilment]+[Fees]+[Reverse Logistics]
+
+Service Cost Per Placed Order =
+DIVIDE([Variable Service Cost],[Orders])
+
+Negative Order Rate =
+DIVIDE([Negative Contribution Orders],[Orders])
+
+Observed Returned Orders =
+SUM(FactOrders[return_flag])
+
+Reverse Cost Per Returned Order =
+DIVIDE([Reverse Logistics],[Observed Returned Orders])
+
+Discounted Delivered Orders =
+CALCULATE([Orders],KEEPFILTERS(FactOrders[delivery_eligible]=1),KEEPFILTERS(FactOrders[discount_paise]>0))
+
+Item Sales Before Refund =
+DIVIDE(SUM(FactItems[sales_before_refund_paise]),100)
+
+Item Product Cost =
+DIVIDE(SUM(FactItems[cogs_paise]),100)
+
+Item Merchandise Margin =
+DIVIDE(SUM(FactItems[merchandise_margin_paise]),100)
+
+Item Merchandise Margin Rate =
+DIVIDE([Item Merchandise Margin],[Item Sales Before Refund])
+
+Recognized Units =
+SUM(FactItems[recognized_units])
+
+Delivered Item Orders =
+CALCULATE(DISTINCTCOUNT(FactItems[order_id]),KEEPFILTERS(FactOrders[delivery_eligible]=1))
+
+Units Per Item Order =
+DIVIDE([Recognized Units],[Delivered Item Orders])

@@ -175,6 +175,32 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2807.1432304617574,
+            "y": 499.82581979556267
+          },
+          "nodeIndex": "DimProduct",
+          "nodeLineageTag": "49701491-6a48-4a65-9507-4b912950f1c2",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2523.1432304617574,
+            "y": 449.82581979556267
+          },
+          "nodeIndex": "FactItems",
+          "nodeLineageTag": "80ae19e6-39d4-49c6-b2d9-f7bbb0b6b649",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

@@ -1,5 +1,21 @@
 # Quality assurance evidence
 
+## Expanded eleven-page release - 26 November 2026
+
+- Refreshed the expanded editable PBIP in a separate Power BI Desktop instance, preserving the pre-existing unsaved report window.
+- Verified 60 measures, 16 business tables and four Desktop date definitions. The four new pages rendered with their financial detail tables, slicers, clustered charts/donut and trends.
+- All 14 regression tests passed, including exact discount boundaries, duplicate/orphan item rejection, unrecognized units and the deliberate exclusion of shared order costs from item merchandise margin.
+- Executed both independent pandas notebooks. Item sales and COGS reconcile to orders; all 60 product results are independently reviewed.
+- Executed eight additional native DAX result sets: 519 numeric comparisons across totals, channels, discount bands, payment methods and products passed. Product/discount marketing blanks and status-filter intersections passed. Re-executed the six original native DAX result sets successfully.
+- Executed four new SELECT-only MySQL diagnostics in the separate loopback QA server: 302 numeric comparisons passed. The temporary server was shut down afterward.
+- Observed native Paid Search bar cross-filtering: 8,416 orders, INR 41,394,535 net sales, INR 1,281,448 media spend and INR 16,965,833.63 contribution after marketing. Clicking the selected bar again restored the full snapshot. Native page-tab navigation opened the additional page.
+- Captured all eleven pages after the table-binding correction. All measures now appear in their detail tables. Authoring CLI validation reports zero errors and eight schema-reachability warnings; those warnings are not claimed as full schema coverage.
+- Product results are merchandise economics before refunds, inventory recovery and shared order costs. No causal promotion effect, product net profit or customer acquisition cost is claimed.
+
+Expanded evidence: `commerce-native-validation.json`, `commerce-native-results.json`, `commerce-mysql-validation.json`, `commerce-mysql-results.json`, `commerce-findings.json` and `dashboard-suite.md`.
+
+## Original seven-page baseline
+
 Checks performed 25 November 2026 on the included synthetic snapshot.
 
 - All eight CSV source grains, key relationships, date/channel media coverage and 60,209-item/order accounting were validated before export.

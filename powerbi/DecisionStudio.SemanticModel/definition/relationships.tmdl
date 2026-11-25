@@ -45,3 +45,11 @@ relationship bc87e820-0fd7-486b-bdb8-e3f927f7d68f
 	fromColumn: DimCustomer.first_order_date
 	toColumn: LocalDateTable_98c896e8-01b3-42f2-bc40-bdd2bca6f6d5.Date
 
+relationship commerce_orders_items
+	fromColumn: FactItems.order_id
+	toColumn: FactOrders.order_id
+
+relationship commerce_product_items
+	fromColumn: FactItems.product_id
+	toColumn: DimProduct.product_id
+

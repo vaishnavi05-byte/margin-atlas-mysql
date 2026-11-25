@@ -1,0 +1,36 @@
+table DimProduct
+	lineageTag: 49701491-6a48-4a65-9507-4b912950f1c2
+
+	column product_id
+		dataType: int64
+		lineageTag: 4f493034-b6f6-4f88-ba99-6f182c96f557
+		summarizeBy: none
+		sourceColumn: product_id
+
+	column category_id
+		dataType: int64
+		lineageTag: 6b920d28-1ed7-42fb-a0c2-d0fd99c3cc56
+		summarizeBy: none
+		sourceColumn: category_id
+
+	column product
+		dataType: string
+		lineageTag: 07bb7819-5e95-46ce-b4cd-13e5e6a3a026
+		summarizeBy: none
+		sourceColumn: product
+
+	column list_price_paise
+		dataType: int64
+		lineageTag: dbfd0477-2e33-4f32-8882-445a309748af
+		summarizeBy: sum
+		sourceColumn: list_price_paise
+
+	column unit_cost_paise
+		dataType: int64
+		lineageTag: 8385bfaa-2e01-4620-a214-5b696d10eb32
+		summarizeBy: sum
+		sourceColumn: unit_cost_paise
+
+	partition DimProduct = m
+		mode: import
+		source = ReadCSV("DimProduct",{{"product_id",Int64.Type},{"category_id",Int64.Type},{"product",type text},{"list_price_paise",Int64.Type},{"unit_cost_paise",Int64.Type}})

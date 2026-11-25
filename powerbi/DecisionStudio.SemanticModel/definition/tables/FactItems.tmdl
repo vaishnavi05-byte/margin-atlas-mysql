@@ -1,0 +1,66 @@
+table FactItems
+	lineageTag: 80ae19e6-39d4-49c6-b2d9-f7bbb0b6b649
+
+	column line_id
+		dataType: string
+		lineageTag: b981ae17-8deb-491d-ae5c-997f0a34b180
+		summarizeBy: none
+		sourceColumn: line_id
+
+	column order_id
+		dataType: string
+		lineageTag: 8dc53c9e-8b1b-45cc-a992-ba75ad1e6047
+		summarizeBy: none
+		sourceColumn: order_id
+
+	column product_id
+		dataType: int64
+		lineageTag: 2c0a2bea-b938-4b92-b83c-31cfbd6a60ee
+		summarizeBy: none
+		sourceColumn: product_id
+
+	column quantity
+		dataType: int64
+		lineageTag: 2b4c5c98-b2d4-480f-815b-7051cadb3dc2
+		summarizeBy: sum
+		sourceColumn: quantity
+
+	column gross_paise
+		dataType: int64
+		lineageTag: 52f265b1-2ca2-47ff-973d-f1444ec2cf9f
+		summarizeBy: sum
+		sourceColumn: gross_paise
+
+	column discount_paise
+		dataType: int64
+		lineageTag: bcc7fb49-4718-48b2-8de7-7d19a5775da3
+		summarizeBy: sum
+		sourceColumn: discount_paise
+
+	column cogs_paise
+		dataType: int64
+		lineageTag: b38227d0-5e40-459a-9a3c-5323f62db76a
+		summarizeBy: sum
+		sourceColumn: cogs_paise
+
+	column recognized_units
+		dataType: int64
+		lineageTag: 3a71551e-c0c1-48d9-bc79-9ab7a698fb91
+		summarizeBy: sum
+		sourceColumn: recognized_units
+
+	column sales_before_refund_paise
+		dataType: int64
+		lineageTag: 239242a1-0ce4-4982-b45e-39046fd4290b
+		summarizeBy: sum
+		sourceColumn: sales_before_refund_paise
+
+	column merchandise_margin_paise
+		dataType: int64
+		lineageTag: 02c3ada7-abe9-4010-94f5-6b58e2a0b6ac
+		summarizeBy: sum
+		sourceColumn: merchandise_margin_paise
+
+	partition FactItems = m
+		mode: import
+		source = ReadCSV("FactItems",{{"line_id",type text},{"order_id",type text},{"product_id",Int64.Type},{"quantity",Int64.Type},{"gross_paise",Int64.Type},{"discount_paise",Int64.Type},{"cogs_paise",Int64.Type},{"recognized_units",Int64.Type},{"sales_before_refund_paise",Int64.Type},{"merchandise_margin_paise",Int64.Type}})

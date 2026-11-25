@@ -30,4 +30,7 @@ def verify():
     verified={'native_dax_totals_match_independent_pandas':True,'all_30_segment_exposures_ranks_and_wilson_intervals_match_python':True,'scenario_boundary_and_marketing_grain_checks':True,'sensitivity_curve_verified':len(results)>5,'source_sha256':manifest['source_sha256']}
     (ROOT/'docs/native-validation.json').write_text(json.dumps(verified,indent=2),encoding='utf-8')
     print('Native DAX, ranking, Wilson intervals, scenario boundaries and attribution checks passed.')
-if __name__=='__main__':verify()
+if __name__=='__main__':
+    verify()
+    from verify_commerce_results import verify as verify_commerce
+    verify_commerce()
