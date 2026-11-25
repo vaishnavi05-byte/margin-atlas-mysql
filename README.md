@@ -4,9 +4,9 @@
 
 [Published project branch](https://github.com/vaishnavi05-byte/margin-atlas-mysql/tree/codex/decision-studio) | [Interview walkthrough](docs/interview-walkthrough.md) | [Validation evidence](docs/quality-assurance.md)
 
-**Verified on GitHub Actions:** [Windows and Linux checks passed](https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45716311301) for the expanded 11-page release. Both runners rebuilt the data, passed the 14-test suite, executed both notebooks and reconciled saved native evidence.
+**Verified on GitHub Actions:** [Windows and Linux checks passed](https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45723389933) for the current functional release `81f4538`. Both runners rebuilt data, passed 14 tests, executed both notebooks, validated native source and reconciled saved DAX evidence, including period comparisons. Later release-documentation commits do not alter the tested analytics.
 
-**Expanded-suite validation:** 14 regression tests pass locally. The added dashboards reconcile with independent pandas through **519 native DAX comparisons and 302 MySQL comparisons**. All twelve pages were refreshed and rendered in Power BI Desktop. GitHub Actions rebuilds the data, executes both notebooks, validates source bindings and reconciles saved native DAX evidence; it does not launch Desktop.
+**Current-suite validation:** 14 regression tests pass locally. The added dashboards reconcile with independent pandas through **519 commerce DAX comparisons, 40 period-comparison checks and 302 MySQL comparisons**. All twelve pages were refreshed and rendered in Power BI Desktop. GitHub Actions rebuilds the data, executes both notebooks, validates source bindings and reconciles saved native DAX evidence; it does not launch Desktop.
 
 Revenue can grow while thousands of orders lose contribution. This project helps a manager choose a category-region problem to investigate, inspect the affected orders and test the economics required for an intervention to break even.
 

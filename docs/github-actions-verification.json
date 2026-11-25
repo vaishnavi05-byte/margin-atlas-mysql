@@ -1,13 +1,14 @@
 {
-  "repository": "vaishnavi05-byte/margin-atlas-mysql",
-  "run_id": 45716311301,
-  "run_url": "https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45716311301",
+  "tested_project_commit": "81f453857df4c01b43a99f6eec2d14d09ca62b93",
+  "dispatch_status": 204,
+  "previous_run_id": 45716311301,
+  "run_id": 45723389933,
+  "run_url": "https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45723389933",
+  "status": "completed",
   "conclusion": "success",
-  "completed_at": "2026-11-25T22:49:13Z",
-  "workflow_commit": "e9c196fd409da5c8b215c28f5967e4e41effe1a9",
-  "tested_project_commit": "eb5a360b39735bdb2a5160eba905b792112640d9",
-  "functional_source_unchanged_since_tested_commit": true,
-  "platforms": [
+  "completed_at": "2026-11-25T23:43:11Z",
+  "workflow_commit": "4fa2a462ac99476dea9998ca80141b0cca7eb064",
+  "jobs": [
     {
       "name": "Python / ubuntu-latest",
       "conclusion": "success",
@@ -44,20 +45,5 @@
         "Complete job"
       ]
     }
-  ],
-  "local_regression_tests": 14,
-  "expanded_report_pages": 11,
-  "model_measures": 60,
-  "native_commerce_comparisons": 519,
-  "mysql_commerce_comparisons": 302,
-  "source_sha256": {
-    "dim_category.csv": "afdd4f3a2465e13070e2d1312cd3a90b40f00371db6d49097e097d47d024e2c1",
-    "dim_channel.csv": "37f819a690da77a39c2c0be9f136cc946b0d1bc3ecbfaa1a968324ed934ce57a",
-    "dim_customer.csv": "87e7832d0c144709a312af45e966cd3eb5b0e9e31013049c15ac456cff05c00f",
-    "dim_date.csv": "8b829469c71281115059e86f67f056b2468f5e9e1e7d762e93d0daccf1add463",
-    "dim_product.csv": "bedf6a638f05d7a241616342c2ece812bf1b6812b705615e02e6c938b79f1ce2",
-    "fact_marketing.csv": "e355d813f2ab604b37572ab06fbdc1cc894b32bea5468ecf1ff599dd72f3362f",
-    "fact_order_items.csv": "981f7ebe98dd153efa4bff68d2de0898af3c4f5461c708504c0f6f9cd404e377",
-    "fact_orders.csv": "7e279497d6cea0041660bf6420ed0cfd55a8852a40329f941cf00f41d455e25a"
-  }
+  ]
 }

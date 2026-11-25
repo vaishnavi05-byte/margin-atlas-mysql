@@ -1,0 +1,11 @@
+{
+  "native_file": "powerbi/MarginAtlasDecisionStudio_Premium.pbix",
+  "bytes": 3232692,
+  "sha256": "33ec8f151a4d25404eecf8832e44f6aa139c31169990b476b288b88d2a52e3a1",
+  "analytical_pages": 12,
+  "DAX_measures": 73,
+  "saved_in": "Power BI Desktop 2.160.1151.0",
+  "archive_CRC_validated": true,
+  "imported_DataModel_included": true,
+  "remote_git_blob_matches_local": true
+}
