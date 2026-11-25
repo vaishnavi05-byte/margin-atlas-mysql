@@ -1,0 +1,104 @@
+Orders =
+COUNTROWS(FactOrders)
+
+Net Sales =
+DIVIDE(SUM(FactOrders[net_sales_paise]),100)
+
+Contribution Before Marketing =
+DIVIDE(SUM(FactOrders[contribution_before_marketing_paise]),100)
+
+Contribution Margin Before Marketing =
+DIVIDE([Contribution Before Marketing],[Net Sales])
+
+Negative Contribution Exposure =
+DIVIDE(SUM(FactOrders[negative_contribution_paise]),100)
+
+Negative Contribution Orders =
+SUM(FactOrders[negative_order])
+
+Mature Orders =
+SUM(FactOrders[return_mature])
+
+Mature Returns =
+SUM(FactOrders[mature_returns])
+
+Mature Return Rate =
+DIVIDE([Mature Returns],[Mature Orders])
+
+Delivery Eligible Orders =
+SUM(FactOrders[delivery_eligible])
+
+Late Orders =
+SUM(FactOrders[late_flag])
+
+Late Rate =
+DIVIDE([Late Orders],[Delivery Eligible Orders])
+
+Mature Late Rate =
+DIVIDE(SUM(FactOrders[mature_late_orders]),[Mature Orders])
+
+Discounts =
+DIVIDE(SUM(FactOrders[discount_paise]),100)
+
+Refunds =
+DIVIDE(SUM(FactOrders[refund_paise]),100)
+
+Net Product Cost =
+DIVIDE(SUM(FactOrders[net_product_cost_paise]),100)
+
+Fulfilment =
+DIVIDE(SUM(FactOrders[fulfilment_paise]),100)
+
+Fees =
+DIVIDE(SUM(FactOrders[payment_fee_paise]),100)
+
+Reverse Logistics =
+DIVIDE(SUM(FactOrders[reverse_logistics_paise]),100)
+
+Selected Metric =
+SWITCH(SELECTEDVALUE(Metric[Label],"Net sales"),"Net sales",[Net Sales],"Contribution before marketing",[Contribution Before Marketing],[Negative Contribution Exposure])
+
+Sample Eligible =
+INT([Mature Orders]>=SELECTEDVALUE(MinimumSample[Orders],100))
+
+Priority Rank =
+IF(HASONEVALUE(DimSegment[segment_key]) && [Sample Eligible]=1,RANKX(FILTER(ALLSELECTED(DimSegment),CALCULATE([Sample Eligible])=1),[Negative Contribution Exposure],,DESC,Dense))
+
+Return Rate Low 95 =
+VAR n=[Mature Orders] VAR p=[Mature Return Rate] VAR z=1.959963984540054 RETURN IF(n>0,DIVIDE(p+z*z/(2*n)-z*SQRT(p*(1-p)/n+z*z/(4*n*n)),1+z*z/n))
+
+Return Rate High 95 =
+VAR n=[Mature Orders] VAR p=[Mature Return Rate] VAR z=1.959963984540054 RETURN IF(n>0,DIVIDE(p+z*z/(2*n)+z*SQRT(p*(1-p)/n+z*z/(4*n*n)),1+z*z/n))
+
+Scenario Return Cost Base =
+DIVIDE(SUM(FactOrders[scenario_return_base_paise]),100)
+
+Modeled Avoided Return Cost =
+[Scenario Return Cost Base]*DIVIDE(SELECTEDVALUE(Recovery[Percent],15),100)
+
+Scenario Intervention Cost =
+[Mature Orders]*SELECTEDVALUE(InterventionCost[INR],0)
+
+Modeled Net Contribution Change =
+[Modeled Avoided Return Cost]-[Scenario Intervention Cost]
+
+Break Even Cost Per Mature Order =
+DIVIDE([Modeled Avoided Return Cost],[Mature Orders])
+
+Marketing Spend =
+IF(ISFILTERED(DimCategory)||ISFILTERED(DimCustomer)||ISFILTERED(DimSegment)||ISFILTERED(FactOrders[order_id])||ISFILTERED(FactOrders[payment_method])||ISFILTERED(FactOrders[status]),BLANK(),DIVIDE(SUM(FactMarketing[spend_paise]),100))
+
+Contribution After Marketing =
+IF(NOT ISBLANK([Marketing Spend]),[Contribution Before Marketing]-[Marketing Spend])
+
+Eligible Cohort Customers =
+COUNTROWS(Cohorts)
+
+Repeat Customers 90d =
+SUM(Cohorts[repeat_90d])
+
+Repeat Rate 90d =
+DIVIDE([Repeat Customers 90d],[Eligible Cohort Customers])
+
+Sensitivity Net Change =
+[Scenario Return Cost Base] * DIVIDE(SELECTEDVALUE(SensitivityRecovery[Percent]),100) - [Scenario Intervention Cost]

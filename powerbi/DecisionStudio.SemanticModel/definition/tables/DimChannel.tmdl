@@ -1,0 +1,19 @@
+table DimChannel
+	lineageTag: e6f2a704-e1ba-46ad-8e1e-29e5f89e51f8
+
+	column channel_id
+		dataType: int64
+		lineageTag: 81008fbf-cded-4172-8e49-13bd9852be8d
+		summarizeBy: none
+		sourceColumn: channel_id
+
+	column channel
+		dataType: string
+		lineageTag: 2789a199-c878-49d1-bffc-04cb6ce2059c
+		summarizeBy: none
+		sourceColumn: channel
+
+	partition DimChannel = m
+		mode: import
+		source = ReadCSV("DimChannel",{{"channel_id",Int64.Type},{"channel",type text}})
+

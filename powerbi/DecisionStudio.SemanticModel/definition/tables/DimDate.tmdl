@@ -1,0 +1,24 @@
+table DimDate
+	lineageTag: b6dc88f3-bc1b-4385-b9ed-7b31f834ae05
+	dataCategory: Time
+
+	column date
+		dataType: dateTime
+		isKey
+		formatString: dd mmm yyyy
+		lineageTag: c7759b8f-215b-493f-b2ee-dbf6110830d1
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column month
+		dataType: string
+		lineageTag: cdf26c87-9e90-4a82-bc1c-3453125dbee2
+		summarizeBy: none
+		sourceColumn: month
+
+	partition DimDate = m
+		mode: import
+		source = ReadCSV("DimDate",{{"date",type date},{"month",type text}})
+

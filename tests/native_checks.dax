@@ -1,0 +1,6 @@
+EVALUATE ROW("Orders",[Orders],"Net Sales",[Net Sales],"Contribution",[Contribution Before Marketing],"Negative Orders",[Negative Contribution Orders],"Exposure",[Negative Contribution Exposure],"Mature Orders",[Mature Orders],"Mature Returns",[Mature Returns],"Marketing",[Marketing Spend],"Cohort Customers",[Eligible Cohort Customers],"Repeat Customers",[Repeat Customers 90d])
+EVALUATE SUMMARIZECOLUMNS(DimSegment[segment_key],DimSegment[category],DimSegment[region],"Orders",[Orders],"Exposure",[Negative Contribution Exposure],"Rank",[Priority Rank],"Low95",[Return Rate Low 95],"High95",[Return Rate High 95])
+EVALUATE CALCULATETABLE(ROW("Mature Orders",[Mature Orders],"Net Change",[Modeled Net Contribution Change]),TREATAS({0},Recovery[Percent]),TREATAS({10},InterventionCost[INR]))
+EVALUATE CALCULATETABLE(ROW("Marketing Must Be Blank",[Marketing Spend],"After Marketing Must Be Blank",[Contribution After Marketing],"Selected Orders",[Orders]),TREATAS({"Apparel"},DimCategory[category]))
+EVALUATE CALCULATETABLE(ROW("Net Change",[Modeled Net Contribution Change]),TREATAS({0},Recovery[Percent]),TREATAS({0},InterventionCost[INR]))
+EVALUATE CALCULATETABLE(SUMMARIZECOLUMNS(SensitivityRecovery[Percent],"Net",[Sensitivity Net Change]),TREATAS({0},Recovery[Percent]),TREATAS({10},InterventionCost[INR])) ORDER BY SensitivityRecovery[Percent]

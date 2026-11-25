@@ -1,0 +1,9 @@
+check,result,detail
+Unique order IDs,PASS,30000 unique orders
+Dimension references,PASS,Every order resolves
+Order financial identities,PASS,"Integer paise, every order"
+Exclusive segment totals,PASS,"Order counts, sales and negative contribution reconcile"
+Date and maturity flags,PASS,Snapshot 30 September 2026
+Line-item reconciliation,PASS,"60209 items reconcile to order gross, discount and COGS"
+Marketing coverage,PASS,Full date/channel grid; no order-dependent spend loss
+Native DAX execution,PASS,"Totals, ranks, intervals and scenario boundaries verified"

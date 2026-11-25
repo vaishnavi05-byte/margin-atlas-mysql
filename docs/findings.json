@@ -1,0 +1,14 @@
+{
+  "orders": 30000,
+  "net_sales_inr": 142622893.0,
+  "contribution_before_marketing_inr": 61302497.37,
+  "negative_orders": 4159,
+  "negative_exposure_inr": 4699911.63,
+  "marketing_inr": 3534460.75,
+  "mature_orders": 26301,
+  "mature_returns": 3143,
+  "top_five_exposure_share": 0.4497392858427,
+  "scenario_15pct_gross_benefit_inr": 1849166.6039999998,
+  "scenario_break_even_cost_inr": 70.30784396030569,
+  "scenario_15pct_cost10_net_inr": 1586156.6039999998
+}

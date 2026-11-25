@@ -1,0 +1,34 @@
+table FactMarketing
+	lineageTag: 95771efc-48c3-4e14-a30c-c3548a335719
+
+	column date
+		dataType: dateTime
+		formatString: dd mmm yyyy
+		lineageTag: 6ce46cb4-a2f2-4c35-983a-c35e3ac269a6
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column channel_id
+		dataType: int64
+		lineageTag: a359fc6e-666e-4fd7-97ed-999a4898377e
+		summarizeBy: none
+		sourceColumn: channel_id
+
+	column spend_paise
+		dataType: int64
+		lineageTag: f44e00ca-8c04-4623-93d8-e8fb5b3ae48b
+		summarizeBy: sum
+		sourceColumn: spend_paise
+
+	column month
+		dataType: string
+		lineageTag: 3d5f955b-1531-4b30-9dda-588c8db86ac4
+		summarizeBy: none
+		sourceColumn: month
+
+	partition FactMarketing = m
+		mode: import
+		source = ReadCSV("FactMarketing",{{"date",type date},{"channel_id",Int64.Type},{"spend_paise",Int64.Type},{"month",type text}})
+

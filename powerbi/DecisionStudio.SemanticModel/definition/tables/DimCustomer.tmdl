@@ -1,0 +1,47 @@
+table DimCustomer
+	lineageTag: a248525c-525f-45ed-816b-56de1fe6657e
+
+	column customer_id
+		dataType: int64
+		lineageTag: 800c591c-03a5-46dd-bf91-45a86f31d5e2
+		summarizeBy: none
+		sourceColumn: customer_id
+
+	column region
+		dataType: string
+		lineageTag: 8601e631-9ed3-44f2-8a58-a7dcc0626eda
+		summarizeBy: none
+		sourceColumn: region
+
+	column city_tier
+		dataType: string
+		lineageTag: ec400c2a-5d44-4b27-8cde-bff1bf4ccdbb
+		summarizeBy: none
+		sourceColumn: city_tier
+
+	column acquisition_channel_id
+		dataType: int64
+		lineageTag: ae900a22-212e-4a33-adea-569208b497d5
+		summarizeBy: sum
+		sourceColumn: acquisition_channel_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_order_date
+		dataType: dateTime
+		formatString: dd mmm yyyy
+		lineageTag: 9ac0a3b7-7db5-40ce-b04e-765c39e6b1dc
+		summarizeBy: none
+		sourceColumn: first_order_date
+
+		variation Variation
+			isDefault
+			relationship: bc87e820-0fd7-486b-bdb8-e3f927f7d68f
+			defaultHierarchy: LocalDateTable_98c896e8-01b3-42f2-bc40-bdd2bca6f6d5.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition DimCustomer = m
+		mode: import
+		source = ReadCSV("DimCustomer",{{"customer_id",Int64.Type},{"region",type text},{"city_tier",type text},{"acquisition_channel_id",Int64.Type},{"first_order_date",type date}})
+

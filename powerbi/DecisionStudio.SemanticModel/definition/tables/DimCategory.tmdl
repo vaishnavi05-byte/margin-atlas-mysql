@@ -1,0 +1,19 @@
+table DimCategory
+	lineageTag: 194e4e1d-205b-4fd8-bd28-99cf10169451
+
+	column category_id
+		dataType: int64
+		lineageTag: 0afba354-b0e5-4d28-a115-50bafb505166
+		summarizeBy: none
+		sourceColumn: category_id
+
+	column category
+		dataType: string
+		lineageTag: ac0b8902-8def-45df-8110-70aa93352fbf
+		summarizeBy: none
+		sourceColumn: category
+
+	partition DimCategory = m
+		mode: import
+		source = ReadCSV("DimCategory",{{"category_id",Int64.Type},{"category",type text}})
+

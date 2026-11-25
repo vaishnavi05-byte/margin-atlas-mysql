@@ -1,0 +1,13 @@
+table Recovery
+	lineageTag: c3e075c6-66cb-45f0-999d-f52f4f22e7d2
+
+	column Percent
+		dataType: int64
+		lineageTag: 7ee7f386-5c8d-42fe-b885-2cf682d29cc4
+		summarizeBy: none
+		sourceColumn: Percent
+
+	partition Recovery = m
+		mode: import
+		source = #table(type table [Percent=Int64.Type],{{0},{5},{10},{15},{20},{25},{30},{35},{40}})
+

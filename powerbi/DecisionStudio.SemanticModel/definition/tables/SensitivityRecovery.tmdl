@@ -1,0 +1,13 @@
+table SensitivityRecovery
+	lineageTag: 21783690-b8fa-44e5-a602-cc2883730144
+
+	column Percent
+		dataType: int64
+		lineageTag: 3a96a6c8-4704-4536-8e7c-d22b5cc3a3bc
+		summarizeBy: none
+		sourceColumn: Percent
+
+	partition SensitivityRecovery = m
+		mode: import
+		source = #table(type table [Percent=Int64.Type],{{0},{5},{10},{15},{20},{25},{30},{35},{40}})
+

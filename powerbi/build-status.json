@@ -1,0 +1,16 @@
+{
+  "report_pages": 7,
+  "visual_definitions": 174,
+  "semantic_table_definitions_including_auto_dates": 18,
+  "native_desktop_open_verified": true,
+  "native_refresh_verified": true,
+  "native_dax_reconciled": true,
+  "native_category_filter_reset_navigation_scenario_and_drillthrough_verified": true,
+  "native_pbix_included": true,
+  "github_remote_workflow_run_verified": false,
+  "power_bi_service_publication_verified": false,
+  "model_business_tables": 14,
+  "model_measures": 35,
+  "regression_tests_passed": 9,
+  "mysql_cohort_and_grain_diagnostics_verified": true
+}

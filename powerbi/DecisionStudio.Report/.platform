@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "DecisionStudio"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e81e0c1a-56ce-48f1-9eae-abfb0bca7d0e"
+  }
+}

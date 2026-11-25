@@ -1,0 +1,13 @@
+table MinimumSample
+	lineageTag: 9a031703-9be7-423f-887a-143de562803c
+
+	column Orders
+		dataType: int64
+		lineageTag: e0dc9872-5ef0-4ad2-b332-6c34690463de
+		summarizeBy: none
+		sourceColumn: Orders
+
+	partition MinimumSample = m
+		mode: import
+		source = #table(type table [Orders=Int64.Type],{{25},{50},{100},{250},{500}})
+

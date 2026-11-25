@@ -1,0 +1,47 @@
+relationship ds_rel_0
+	fromColumn: FactOrders.order_date
+	toColumn: DimDate.date
+
+relationship ds_rel_1
+	fromColumn: FactOrders.customer_id
+	toColumn: DimCustomer.customer_id
+
+relationship ds_rel_2
+	fromColumn: FactOrders.category_id
+	toColumn: DimCategory.category_id
+
+relationship ds_rel_3
+	fromColumn: FactOrders.channel_id
+	toColumn: DimChannel.channel_id
+
+relationship ds_rel_4
+	fromColumn: FactOrders.segment_key
+	toColumn: DimSegment.segment_key
+
+relationship ds_rel_5
+	fromColumn: FactMarketing.date
+	toColumn: DimDate.date
+
+relationship ds_rel_6
+	fromColumn: FactMarketing.channel_id
+	toColumn: DimChannel.channel_id
+
+relationship ds_rel_7
+	fromColumn: Cohorts.customer_id
+	toColumn: DimCustomer.customer_id
+
+relationship 9a33a421-0c40-4622-906d-1d7aca682935
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactOrders.promised_date
+	toColumn: LocalDateTable_8bbef5d8-5c31-4594-bbaa-7a38e2b71241.Date
+
+relationship d0f62ea9-7b58-44cd-bec1-d98ff68132a1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactOrders.delivered_date
+	toColumn: LocalDateTable_e38759f6-7d17-4550-97a1-eac51c5e4b4e.Date
+
+relationship bc87e820-0fd7-486b-bdb8-e3f927f7d68f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimCustomer.first_order_date
+	toColumn: LocalDateTable_98c896e8-01b3-42f2-bc40-bdd2bca6f6d5.Date
+

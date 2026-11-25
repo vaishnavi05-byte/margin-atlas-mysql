@@ -1,0 +1,31 @@
+table Cohorts
+	lineageTag: 02e98703-1066-4995-b14e-4f7938a21a96
+
+	column customer_id
+		dataType: int64
+		lineageTag: 8bc82ace-ef81-4dd1-8e10-ffa449d26f7b
+		summarizeBy: none
+		sourceColumn: customer_id
+
+	column cohort
+		dataType: string
+		lineageTag: 81db742e-f959-42cf-88a6-92e909ec9bb6
+		summarizeBy: none
+		sourceColumn: cohort
+
+	column region
+		dataType: string
+		lineageTag: 5d7cb2ec-f2ef-4330-a566-4a9b9e7b12e4
+		summarizeBy: none
+		sourceColumn: region
+
+	column repeat_90d
+		dataType: int64
+		lineageTag: 45c858dd-1a7e-4dd2-8865-f68d9c0579f9
+		summarizeBy: none
+		sourceColumn: repeat_90d
+
+	partition Cohorts = m
+		mode: import
+		source = ReadCSV("Cohorts",{{"customer_id",Int64.Type},{"cohort",type text},{"region",type text},{"repeat_90d",Int64.Type}})
+

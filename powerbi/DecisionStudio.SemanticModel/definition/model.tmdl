@@ -1,0 +1,33 @@
+model Model
+	culture: en-IN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["FactOrders","DimCustomer","DimCategory","DimChannel","FactMarketing","DimDate","DimSegment","Cohorts","DataTrust","Recovery","InterventionCost","MinimumSample","Metric","DataFolder","ReadCSV","SensitivityRecovery"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table FactOrders
+ref table DimCustomer
+ref table DimCategory
+ref table DimChannel
+ref table FactMarketing
+ref table DimDate
+ref table DimSegment
+ref table Cohorts
+ref table DataTrust
+ref table Recovery
+ref table InterventionCost
+ref table MinimumSample
+ref table Metric
+ref table DateTableTemplate_48f62350-90f6-4aaa-a3e5-6f225da07588
+ref table LocalDateTable_8bbef5d8-5c31-4594-bbaa-7a38e2b71241
+ref table LocalDateTable_e38759f6-7d17-4550-97a1-eac51c5e4b4e
+ref table LocalDateTable_98c896e8-01b3-42f2-bc40-bdd2bca6f6d5
+ref table SensitivityRecovery
+

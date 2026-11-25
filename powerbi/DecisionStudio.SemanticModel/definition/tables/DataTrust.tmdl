@@ -1,0 +1,25 @@
+table DataTrust
+	lineageTag: 9cd2ebd1-e69e-4e53-82c3-672cbed6af04
+
+	column check
+		dataType: string
+		lineageTag: b64e4595-4ba8-4fcc-943a-91953f16ba62
+		summarizeBy: none
+		sourceColumn: check
+
+	column result
+		dataType: string
+		lineageTag: d5d9e227-e675-4232-9bbe-32991f409115
+		summarizeBy: none
+		sourceColumn: result
+
+	column detail
+		dataType: string
+		lineageTag: 9b0c0b31-1f78-47d4-a412-646fe7f7bef7
+		summarizeBy: none
+		sourceColumn: detail
+
+	partition DataTrust = m
+		mode: import
+		source = ReadCSV("DataTrust",{{"check",type text},{"result",type text},{"detail",type text}})
+

@@ -1,0 +1,13 @@
+table Metric
+	lineageTag: 53e67bda-92ad-499d-859f-264149b565ce
+
+	column Label
+		dataType: string
+		lineageTag: 38248c15-4026-4474-a4a3-33a9fad0dd5f
+		summarizeBy: none
+		sourceColumn: Label
+
+	partition Metric = m
+		mode: import
+		source = #table(type table [Label=text],{{"Net sales"},{"Contribution before marketing"},{"Negative contribution exposure"}})
+

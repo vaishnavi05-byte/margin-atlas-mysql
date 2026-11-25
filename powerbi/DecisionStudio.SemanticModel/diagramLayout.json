@@ -1,0 +1,190 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 509.17126848337597,
+            "y": -50
+          },
+          "nodeIndex": "Cohorts",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 869.14323046175741,
+            "y": 573.82581979556267
+          },
+          "nodeIndex": "DataTrust",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 635.14323046175764,
+            "y": 265.88429987486461
+          },
+          "nodeIndex": "DimCategory",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 329.160128332898,
+            "y": 889.39827090489916
+          },
+          "nodeIndex": "DimChannel",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 217.80583402001866,
+            "y": 133.9800991834046
+          },
+          "nodeIndex": "DimCustomer",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 615.89628753862075,
+            "y": 751.54443015659126
+          },
+          "nodeIndex": "DimDate",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 686.79007345722891
+          },
+          "nodeIndex": "DimSegment",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 593.52662245717613,
+            "y": 1073.6516395911253
+          },
+          "nodeIndex": "FactMarketing",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 342.32733852038723,
+            "y": 393.34991149309485
+          },
+          "nodeIndex": "FactOrders",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1153.1432304617574,
+            "y": 597.82581979556267
+          },
+          "nodeIndex": "InterventionCost",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1437.1432304617574,
+            "y": 597.82581979556267
+          },
+          "nodeIndex": "Metric",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1721.1432304617574,
+            "y": 597.82581979556267
+          },
+          "nodeIndex": "MinimumSample",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2005.1432304617574,
+            "y": 597.82581979556267
+          },
+          "nodeIndex": "Recovery",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2239.1432304617574,
+            "y": 597.82581979556267
+          },
+          "nodeIndex": "SensitivityRecovery",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

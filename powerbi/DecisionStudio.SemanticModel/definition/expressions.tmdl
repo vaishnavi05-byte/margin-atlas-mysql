@@ -1,0 +1,8 @@
+expression DataFolder = "C:\Users\yasha\OneDrive\Documents\ChatGPT\cv prpjects_1\decision-studio\data\powerbi" meta [IsParameterQuery=true,Type="Text",IsParameterQueryRequired=true]
+	lineageTag: d7fb75d1-b2e5-4b62-8215-7b78db5d35bb
+
+	annotation PBI_ResultType = Text
+
+expression ReadCSV = (name as text, types as list) as table => let Source = Csv.Document(File.Contents(DataFolder & "/" & name & ".csv"),[Delimiter=",",Encoding=65001,QuoteStyle=QuoteStyle.Csv]), Headers=Table.PromoteHeaders(Source,[PromoteAllScalars=true]), Typed=Table.TransformColumnTypes(Headers,types,"en-US") in Typed
+	lineageTag: a452344e-64ed-48ed-a691-6333aab9c434
+

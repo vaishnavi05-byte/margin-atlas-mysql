@@ -1,0 +1,13 @@
+table InterventionCost
+	lineageTag: a149fcd4-b536-4e32-9f31-7d5d93f85aef
+
+	column INR
+		dataType: int64
+		lineageTag: 41119e3b-14a7-429f-a3ae-0b5c1e4fafcf
+		summarizeBy: none
+		sourceColumn: INR
+
+	partition InterventionCost = m
+		mode: import
+		source = #table(type table [INR=Int64.Type],{{0},{10},{20},{30},{40},{50},{60},{70},{80},{90},{100},{110},{120},{130},{140},{150},{160},{170},{180},{190},{200},{210},{220},{230},{240},{250}})
+

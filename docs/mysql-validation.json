@@ -1,0 +1,20 @@
+{
+  "engine": "26.7.0",
+  "database": "decision_studio",
+  "isolation": "Separate temporary test server; original database untouched",
+  "totals": {
+    "orders": 30000,
+    "net_sales_paise": 14262289300,
+    "contribution_paise": 6130249737,
+    "negative_orders": 4159,
+    "exposure_paise": 469991163,
+    "mature_orders": 26301,
+    "mature_returns": 3143
+  },
+  "totals_match_python": true,
+  "eligible_segment_rank_matches_python": true,
+  "eligible_segments": 25,
+  "cohort_customer_and_repeat_counts_match_python": true,
+  "monthly_calendar_diagnostics_executed": true,
+  "line_order_mismatches": 0
+}

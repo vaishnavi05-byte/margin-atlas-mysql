@@ -1,0 +1,414 @@
+table FactOrders
+	lineageTag: bf039067-de3e-4da3-b705-2836fdaadcbb
+
+	measure Orders = COUNTROWS(FactOrders)
+		formatString: #,0
+		lineageTag: 33d89861-406e-4373-99a8-1f7a050ee63d
+
+	measure 'Net Sales' = DIVIDE(SUM(FactOrders[net_sales_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 712c594c-51c8-4d83-9776-2ba156746dd0
+
+	measure 'Contribution Before Marketing' = DIVIDE(SUM(FactOrders[contribution_before_marketing_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 33f31bea-8808-4d97-9254-5ba5f5f127c7
+
+	measure 'Contribution Margin Before Marketing' = DIVIDE([Contribution Before Marketing],[Net Sales])
+		formatString: 0.0%
+		lineageTag: b8171d09-76c0-4bae-a4df-80cb06db2778
+
+	measure 'Negative Contribution Exposure' = DIVIDE(SUM(FactOrders[negative_contribution_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 7edea32a-ce00-456d-8934-2a0d4e71acb2
+
+	measure 'Negative Contribution Orders' = SUM(FactOrders[negative_order])
+		formatString: #,0
+		lineageTag: e8fac53d-ba81-42e6-9413-83b6c82a3546
+
+	measure 'Mature Orders' = SUM(FactOrders[return_mature])
+		formatString: #,0
+		lineageTag: a3c5c311-eac6-40b8-8506-360f5875a769
+
+	measure 'Mature Returns' = SUM(FactOrders[mature_returns])
+		formatString: #,0
+		lineageTag: 2e10e803-7c63-4c4e-8748-15dcedbaebab
+
+	measure 'Mature Return Rate' = DIVIDE([Mature Returns],[Mature Orders])
+		formatString: 0.0%
+		lineageTag: e1479cea-8078-4418-a608-4640bddca039
+
+	measure 'Delivery Eligible Orders' = SUM(FactOrders[delivery_eligible])
+		formatString: #,0
+		lineageTag: 4a13c6e5-a27f-4296-93de-55f8a87ed63b
+
+	measure 'Late Orders' = SUM(FactOrders[late_flag])
+		formatString: #,0
+		lineageTag: 47d3353b-db13-453a-ad69-fec92a87a238
+
+	measure 'Late Rate' = DIVIDE([Late Orders],[Delivery Eligible Orders])
+		formatString: 0.0%
+		lineageTag: 36bddaab-f49c-4276-b3a1-e8cb3dfcbe6f
+
+	measure 'Mature Late Rate' = DIVIDE(SUM(FactOrders[mature_late_orders]),[Mature Orders])
+		formatString: 0.0%
+		lineageTag: 7ecc92ed-48f8-4146-893b-ec1450b92dd5
+
+	measure Discounts = DIVIDE(SUM(FactOrders[discount_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 890b7a4e-8925-46e7-aa2c-d08b6e5c4c3b
+
+	measure Refunds = DIVIDE(SUM(FactOrders[refund_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 02baaffe-95a8-4fdb-bad6-84fa3b76bd26
+
+	measure 'Net Product Cost' = DIVIDE(SUM(FactOrders[net_product_cost_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 633836ce-c05c-46e3-b96a-81f74901f6fe
+
+	measure Fulfilment = DIVIDE(SUM(FactOrders[fulfilment_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: d622e777-0f17-4fa3-921d-93028cb3d948
+
+	measure Fees = DIVIDE(SUM(FactOrders[payment_fee_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: dce1bc69-c980-4066-8ced-c89f0d6d6c5e
+
+	measure 'Reverse Logistics' = DIVIDE(SUM(FactOrders[reverse_logistics_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 6964363a-a38f-49b9-9c02-397108dff253
+
+	measure 'Selected Metric' = SWITCH(SELECTEDVALUE(Metric[Label],"Net sales"),"Net sales",[Net Sales],"Contribution before marketing",[Contribution Before Marketing],[Negative Contribution Exposure])
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: a9a84c58-046b-4f26-9c8e-71cb6021d47f
+
+	measure 'Sample Eligible' = INT([Mature Orders]>=SELECTEDVALUE(MinimumSample[Orders],100))
+		formatString: 0
+		lineageTag: 6dbee279-88b4-4321-bbf4-4bf3bf0484f8
+
+	measure 'Priority Rank' = IF(HASONEVALUE(DimSegment[segment_key]) && [Sample Eligible]=1,RANKX(FILTER(ALLSELECTED(DimSegment),CALCULATE([Sample Eligible])=1),[Negative Contribution Exposure],,DESC,Dense))
+		formatString: 0
+		lineageTag: c1e537ce-ce4c-4844-ad07-818462a3c6f5
+
+	measure 'Return Rate Low 95' = VAR n=[Mature Orders] VAR p=[Mature Return Rate] VAR z=1.959963984540054 RETURN IF(n>0,DIVIDE(p+z*z/(2*n)-z*SQRT(p*(1-p)/n+z*z/(4*n*n)),1+z*z/n))
+		formatString: 0.0%
+		lineageTag: 03326026-965e-4056-9004-b2935cdfdef6
+
+	measure 'Return Rate High 95' = VAR n=[Mature Orders] VAR p=[Mature Return Rate] VAR z=1.959963984540054 RETURN IF(n>0,DIVIDE(p+z*z/(2*n)+z*SQRT(p*(1-p)/n+z*z/(4*n*n)),1+z*z/n))
+		formatString: 0.0%
+		lineageTag: b4ed7c2b-c97e-49a3-9607-003c4cccaa43
+
+	measure 'Scenario Return Cost Base' = DIVIDE(SUM(FactOrders[scenario_return_base_paise]),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 6d03e31f-771f-4760-9fe4-ca91a159fe8e
+
+	measure 'Modeled Avoided Return Cost' = [Scenario Return Cost Base]*DIVIDE(SELECTEDVALUE(Recovery[Percent],15),100)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 5383e805-918d-408b-aafe-11ea53f774d3
+
+	measure 'Scenario Intervention Cost' = [Mature Orders]*SELECTEDVALUE(InterventionCost[INR],0)
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 35e1643a-1157-4ac9-9068-24daf3a99ed9
+
+	measure 'Modeled Net Contribution Change' = [Modeled Avoided Return Cost]-[Scenario Intervention Cost]
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 66abe558-7c46-4829-a7ac-3ad836856bac
+
+	measure 'Break Even Cost Per Mature Order' = DIVIDE([Modeled Avoided Return Cost],[Mature Orders])
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: f8006ad5-ed97-4418-9acd-44cfea3fe626
+
+	measure 'Marketing Spend' = IF(ISFILTERED(DimCategory)||ISFILTERED(DimCustomer)||ISFILTERED(DimSegment)||ISFILTERED(FactOrders[order_id])||ISFILTERED(FactOrders[payment_method])||ISFILTERED(FactOrders[status]),BLANK(),DIVIDE(SUM(FactMarketing[spend_paise]),100))
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 17643567-3645-4637-9c15-880826ef575e
+
+	measure 'Contribution After Marketing' = IF(NOT ISBLANK([Marketing Spend]),[Contribution Before Marketing]-[Marketing Spend])
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 22bb3aa1-4888-4971-b63b-4d5383c2e78a
+
+	measure 'Eligible Cohort Customers' = COUNTROWS(Cohorts)
+		formatString: #,0
+		lineageTag: 4fe97ac4-a470-4e1c-a7bd-f63a09152623
+
+	measure 'Repeat Customers 90d' = SUM(Cohorts[repeat_90d])
+		formatString: #,0
+		lineageTag: 32f5199c-7983-4d9a-a9f7-bc6fbc56fbf3
+
+	measure 'Repeat Rate 90d' = DIVIDE([Repeat Customers 90d],[Eligible Cohort Customers])
+		formatString: 0.0%
+		lineageTag: 792dcb8f-ad69-47f1-968e-1dbfccd2dc90
+
+	measure 'Sensitivity Net Change' = [Scenario Return Cost Base] * DIVIDE(SELECTEDVALUE(SensitivityRecovery[Percent]),100) - [Scenario Intervention Cost]
+		formatString: "INR "#,0;("INR "#,0);"INR "0
+		lineageTag: 5943e514-372b-4b6f-8ff5-ebab1e2b151d
+
+	column order_id
+		dataType: string
+		lineageTag: ee323324-7a8b-4dbd-a3f4-281539802ff6
+		summarizeBy: none
+		sourceColumn: order_id
+
+	column customer_id
+		dataType: int64
+		isHidden
+		lineageTag: f0334d79-9d10-42b0-a213-d91354ada52d
+		summarizeBy: none
+		sourceColumn: customer_id
+
+	column order_date
+		dataType: dateTime
+		formatString: dd mmm yyyy
+		lineageTag: a8dc95a7-8f63-40e8-a7a7-3393df99839d
+		summarizeBy: none
+		sourceColumn: order_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column category_id
+		dataType: int64
+		isHidden
+		lineageTag: 85258074-e7c9-4c8f-b70c-8831757c8a2e
+		summarizeBy: none
+		sourceColumn: category_id
+
+	column channel_id
+		dataType: int64
+		isHidden
+		lineageTag: a31e457c-a68a-48f3-a505-a335302522a5
+		summarizeBy: none
+		sourceColumn: channel_id
+
+	column payment_method
+		dataType: string
+		lineageTag: 9a293967-36c7-4990-b65a-cf8fc65aa95d
+		summarizeBy: none
+		sourceColumn: payment_method
+
+	column promised_date
+		dataType: dateTime
+		formatString: dd mmm yyyy
+		lineageTag: 04426249-f2bd-427b-84e5-aafc17d533f3
+		summarizeBy: none
+		sourceColumn: promised_date
+
+		variation Variation
+			isDefault
+			relationship: 9a33a421-0c40-4622-906d-1d7aca682935
+			defaultHierarchy: LocalDateTable_8bbef5d8-5c31-4594-bbaa-7a38e2b71241.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column delivered_date
+		dataType: dateTime
+		formatString: dd mmm yyyy
+		lineageTag: 97dc7248-e41c-4250-bdeb-3b000b149915
+		summarizeBy: none
+		sourceColumn: delivered_date
+
+		variation Variation
+			isDefault
+			relationship: d0f62ea9-7b58-44cd-bec1-d98ff68132a1
+			defaultHierarchy: LocalDateTable_e38759f6-7d17-4550-97a1-eac51c5e4b4e.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column status
+		dataType: string
+		lineageTag: f4b42b34-d7bf-47bb-9f15-af37b896c328
+		summarizeBy: none
+		sourceColumn: status
+
+	column gross_paise
+		dataType: int64
+		lineageTag: 872b6756-9e9c-4677-b8b1-b7726b2fed4a
+		summarizeBy: sum
+		sourceColumn: gross_paise
+
+	column discount_paise
+		dataType: int64
+		lineageTag: 8e0824d3-04e5-41c7-9f0d-1ed24825e4af
+		summarizeBy: sum
+		sourceColumn: discount_paise
+
+	column refund_paise
+		dataType: int64
+		lineageTag: 8f7133b4-d671-4d3b-8e4f-778d13144798
+		summarizeBy: sum
+		sourceColumn: refund_paise
+
+	column cogs_paise
+		dataType: int64
+		lineageTag: d7959090-2cc5-4d4d-8e30-71d389ded405
+		summarizeBy: sum
+		sourceColumn: cogs_paise
+
+	column recovered_inventory_paise
+		dataType: int64
+		lineageTag: b380aa71-17d7-47b0-b2c9-3bfe2531be7d
+		summarizeBy: sum
+		sourceColumn: recovered_inventory_paise
+
+	column fulfilment_paise
+		dataType: int64
+		lineageTag: d9e5f7c5-659a-4c4f-96be-39af1da9f924
+		summarizeBy: sum
+		sourceColumn: fulfilment_paise
+
+	column payment_fee_paise
+		dataType: int64
+		lineageTag: c38062ee-6281-4848-991e-8ecfc256975b
+		summarizeBy: sum
+		sourceColumn: payment_fee_paise
+
+	column reverse_logistics_paise
+		dataType: int64
+		lineageTag: ee74e788-8898-49e8-95ae-b85c34f72f2e
+		summarizeBy: sum
+		sourceColumn: reverse_logistics_paise
+
+	column return_flag
+		dataType: int64
+		lineageTag: f4447523-6798-4617-901a-147a94651aa1
+		summarizeBy: sum
+		sourceColumn: return_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column late_flag
+		dataType: int64
+		lineageTag: 5583fba0-93e4-4a28-8ae7-eb3f7e35a3fa
+		summarizeBy: sum
+		sourceColumn: late_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_eligible
+		dataType: int64
+		lineageTag: 8321c8da-ebc7-4511-be95-a8d4dd5ebaf1
+		summarizeBy: sum
+		sourceColumn: delivery_eligible
+
+		annotation SummarizationSetBy = Automatic
+
+	column return_mature
+		dataType: int64
+		lineageTag: 9040f52e-75d8-4b02-8744-7ae2605a64aa
+		summarizeBy: sum
+		sourceColumn: return_mature
+
+		annotation SummarizationSetBy = Automatic
+
+	column new_customer
+		dataType: int64
+		lineageTag: 53516ba2-608b-4ba5-bfd1-0452123d2be9
+		summarizeBy: sum
+		sourceColumn: new_customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column net_sales_paise
+		dataType: int64
+		lineageTag: ebe45deb-5545-48a6-ba04-dad8e63514f9
+		summarizeBy: sum
+		sourceColumn: net_sales_paise
+
+	column net_product_cost_paise
+		dataType: int64
+		lineageTag: 451291d6-0fe9-4497-9f7a-9697da704cca
+		summarizeBy: sum
+		sourceColumn: net_product_cost_paise
+
+	column contribution_before_marketing_paise
+		dataType: int64
+		lineageTag: b1be1535-2d50-408b-aa68-4cfd6dbafb7f
+		summarizeBy: sum
+		sourceColumn: contribution_before_marketing_paise
+
+	column month
+		dataType: string
+		isHidden
+		lineageTag: dee33f04-f700-4fef-b135-e46f13e17dfc
+		summarizeBy: none
+		sourceColumn: month
+
+	column category
+		dataType: string
+		isHidden
+		lineageTag: 807e20ec-db6e-4237-9147-837de91a83ee
+		summarizeBy: none
+		sourceColumn: category
+
+	column channel
+		dataType: string
+		isHidden
+		lineageTag: 8b8f004f-cc10-45fc-a4d4-c3df1d98cc5f
+		summarizeBy: none
+		sourceColumn: channel
+
+	column region
+		dataType: string
+		isHidden
+		lineageTag: 4ba70fa7-ca18-4ea4-b993-67f47d452f52
+		summarizeBy: none
+		sourceColumn: region
+
+	column segment_key
+		dataType: string
+		isHidden
+		lineageTag: b1b035fc-6b51-4bff-9e14-b18f3712ae2e
+		summarizeBy: none
+		sourceColumn: segment_key
+
+	column negative_order
+		dataType: int64
+		lineageTag: ee618649-59de-4ec8-b0a8-a8156bf343b5
+		summarizeBy: sum
+		sourceColumn: negative_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column negative_contribution_paise
+		dataType: int64
+		lineageTag: 2d572901-4fbe-43ac-a6b8-15506487c84b
+		summarizeBy: sum
+		sourceColumn: negative_contribution_paise
+
+	column mature_returns
+		dataType: int64
+		lineageTag: 5d568d14-3713-4a48-855a-3a41eb202c7d
+		summarizeBy: sum
+		sourceColumn: mature_returns
+
+		annotation SummarizationSetBy = Automatic
+
+	column observed_return_cost_paise
+		dataType: int64
+		lineageTag: 36c251f3-11a9-4835-b0cd-67ba7ec5722d
+		summarizeBy: sum
+		sourceColumn: observed_return_cost_paise
+
+	column scenario_return_base_paise
+		dataType: int64
+		lineageTag: fc4e7101-c15a-4c59-81e0-c9ced5bd437a
+		summarizeBy: sum
+		sourceColumn: scenario_return_base_paise
+
+	column mature_late_orders
+		dataType: int64
+		lineageTag: 16b1118c-252e-457f-bf69-0407c08c735f
+		summarizeBy: sum
+		sourceColumn: mature_late_orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_days
+		dataType: int64
+		lineageTag: 339ef25d-241e-40e9-8653-56d9ccd87784
+		summarizeBy: sum
+		sourceColumn: delivery_days
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactOrders = m
+		mode: import
+		source = ReadCSV("FactOrders",{{"order_id",type text},{"customer_id",Int64.Type},{"order_date",type date},{"category_id",Int64.Type},{"channel_id",Int64.Type},{"payment_method",type text},{"promised_date",type date},{"delivered_date",type date},{"status",type text},{"gross_paise",Int64.Type},{"discount_paise",Int64.Type},{"refund_paise",Int64.Type},{"cogs_paise",Int64.Type},{"recovered_inventory_paise",Int64.Type},{"fulfilment_paise",Int64.Type},{"payment_fee_paise",Int64.Type},{"reverse_logistics_paise",Int64.Type},{"return_flag",Int64.Type},{"late_flag",Int64.Type},{"delivery_eligible",Int64.Type},{"return_mature",Int64.Type},{"new_customer",Int64.Type},{"net_sales_paise",Int64.Type},{"net_product_cost_paise",Int64.Type},{"contribution_before_marketing_paise",Int64.Type},{"month",type text},{"category",type text},{"channel",type text},{"region",type text},{"segment_key",type text},{"negative_order",Int64.Type},{"negative_contribution_paise",Int64.Type},{"mature_returns",Int64.Type},{"observed_return_cost_paise",Int64.Type},{"scenario_return_base_paise",Int64.Type},{"mature_late_orders",Int64.Type},{"delivery_days",Int64.Type}})
+

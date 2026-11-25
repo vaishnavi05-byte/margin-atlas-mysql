@@ -1,0 +1,386 @@
+[
+  {
+    "rows": [
+      {
+        "[Orders]": 30000,
+        "[Net Sales]": 142622893.0,
+        "[Contribution]": 61302497.37,
+        "[Negative Orders]": 4159,
+        "[Exposure]": 4699911.63,
+        "[Mature Orders]": 26301,
+        "[Mature Returns]": 3143,
+        "[Marketing]": 3534460.75,
+        "[Cohort Customers]": 6809,
+        "[Repeat Customers]": 3410
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "DimSegment[segment_key]": "1|East",
+        "DimSegment[category]": "Apparel",
+        "DimSegment[region]": "East",
+        "[Orders]": 1945,
+        "[Exposure]": 441330.13,
+        "[Rank]": 1,
+        "[Low95]": 0.17985343645623955,
+        "[High95]": 0.21753439687114667
+      },
+      {
+        "DimSegment[segment_key]": "1|South",
+        "DimSegment[category]": "Apparel",
+        "DimSegment[region]": "South",
+        "[Orders]": 1991,
+        "[Exposure]": 430987.29,
+        "[Rank]": 2,
+        "[Low95]": 0.17456669614690945,
+        "[High95]": 0.21134311789820578
+      },
+      {
+        "DimSegment[segment_key]": "1|West",
+        "DimSegment[category]": "Apparel",
+        "DimSegment[region]": "West",
+        "[Orders]": 1979,
+        "[Exposure]": 426881.44,
+        "[Rank]": 3,
+        "[Low95]": 0.18905384081971816,
+        "[High95]": 0.22736581027266267
+      },
+      {
+        "DimSegment[segment_key]": "1|North",
+        "DimSegment[category]": "Apparel",
+        "DimSegment[region]": "North",
+        "[Orders]": 1991,
+        "[Exposure]": 422897.48,
+        "[Rank]": 4,
+        "[Low95]": 0.1749877431932344,
+        "[High95]": 0.21155010093321716
+      },
+      {
+        "DimSegment[segment_key]": "1|Central",
+        "DimSegment[category]": "Apparel",
+        "DimSegment[region]": "Central",
+        "[Orders]": 1901,
+        "[Exposure]": 391638.56,
+        "[Rank]": 5,
+        "[Low95]": 0.1690792520621828,
+        "[High95]": 0.20669176546105658
+      },
+      {
+        "DimSegment[segment_key]": "4|Central",
+        "DimSegment[category]": "Electronics",
+        "DimSegment[region]": "Central",
+        "[Orders]": 939,
+        "[Exposure]": 306348.83,
+        "[Rank]": 6,
+        "[Low95]": 0.09249036107618894,
+        "[High95]": 0.1357935407703596
+      },
+      {
+        "DimSegment[segment_key]": "4|North",
+        "DimSegment[category]": "Electronics",
+        "DimSegment[region]": "North",
+        "[Orders]": 929,
+        "[Exposure]": 240162.36,
+        "[Rank]": 7,
+        "[Low95]": 0.10205427931522894,
+        "[High95]": 0.14718896535303252
+      },
+      {
+        "DimSegment[segment_key]": "4|South",
+        "DimSegment[category]": "Electronics",
+        "DimSegment[region]": "South",
+        "[Orders]": 949,
+        "[Exposure]": 235008.5,
+        "[Rank]": 8,
+        "[Low95]": 0.09420824233647454,
+        "[High95]": 0.13742638424364514
+      },
+      {
+        "DimSegment[segment_key]": "4|West",
+        "DimSegment[category]": "Electronics",
+        "DimSegment[region]": "West",
+        "[Orders]": 911,
+        "[Exposure]": 226370.98,
+        "[Rank]": 9,
+        "[Low95]": 0.07799490944026831,
+        "[High95]": 0.11909960543803089
+      },
+      {
+        "DimSegment[segment_key]": "4|East",
+        "DimSegment[category]": "Electronics",
+        "DimSegment[region]": "East",
+        "[Orders]": 1033,
+        "[Exposure]": 217207.97,
+        "[Rank]": 10,
+        "[Low95]": 0.09479486134749905,
+        "[High95]": 0.13600911551020647
+      },
+      {
+        "DimSegment[segment_key]": "3|East",
+        "DimSegment[category]": "Home",
+        "DimSegment[region]": "East",
+        "[Orders]": 1152,
+        "[Exposure]": 165905.08,
+        "[Rank]": 11,
+        "[Low95]": 0.0685040115692586,
+        "[High95]": 0.1027951182699068
+      },
+      {
+        "DimSegment[segment_key]": "3|Central",
+        "DimSegment[category]": "Home",
+        "DimSegment[region]": "Central",
+        "[Orders]": 1095,
+        "[Exposure]": 146689.61,
+        "[Rank]": 12,
+        "[Low95]": 0.07014044569150626,
+        "[High95]": 0.10570773028974943
+      },
+      {
+        "DimSegment[segment_key]": "3|North",
+        "DimSegment[category]": "Home",
+        "DimSegment[region]": "North",
+        "[Orders]": 1034,
+        "[Exposure]": 135668.22,
+        "[Rank]": 13,
+        "[Low95]": 0.06745219655553857,
+        "[High95]": 0.10389371012910413
+      },
+      {
+        "DimSegment[segment_key]": "3|West",
+        "DimSegment[category]": "Home",
+        "DimSegment[region]": "West",
+        "[Orders]": 968,
+        "[Exposure]": 129793.47,
+        "[Rank]": 14,
+        "[Low95]": 0.07807475769841113,
+        "[High95]": 0.11740562263613837
+      },
+      {
+        "DimSegment[segment_key]": "3|South",
+        "DimSegment[category]": "Home",
+        "DimSegment[region]": "South",
+        "[Orders]": 1120,
+        "[Exposure]": 99163.48,
+        "[Rank]": 15,
+        "[Low95]": 0.0618078866270754,
+        "[High95]": 0.09535899411175432
+      },
+      {
+        "DimSegment[segment_key]": "2|East",
+        "DimSegment[category]": "Beauty",
+        "DimSegment[region]": "East",
+        "[Orders]": 1369,
+        "[Exposure]": 97763.52,
+        "[Rank]": 16,
+        "[Low95]": 0.06100642122121459,
+        "[High95]": 0.09069779510391411
+      },
+      {
+        "DimSegment[segment_key]": "2|North",
+        "DimSegment[category]": "Beauty",
+        "DimSegment[region]": "North",
+        "[Orders]": 1245,
+        "[Exposure]": 94120.03,
+        "[Rank]": 17,
+        "[Low95]": 0.0667032482314732,
+        "[High95]": 0.09923449518661714
+      },
+      {
+        "DimSegment[segment_key]": "2|West",
+        "DimSegment[category]": "Beauty",
+        "DimSegment[region]": "West",
+        "[Orders]": 1289,
+        "[Exposure]": 86961.31,
+        "[Rank]": 18,
+        "[Low95]": 0.05811092293410748,
+        "[High95]": 0.08877178648391876
+      },
+      {
+        "DimSegment[segment_key]": "2|South",
+        "DimSegment[category]": "Beauty",
+        "DimSegment[region]": "South",
+        "[Orders]": 1300,
+        "[Exposure]": 72288.9,
+        "[Rank]": 19,
+        "[Low95]": 0.049625156134701524,
+        "[High95]": 0.07776493591431109
+      },
+      {
+        "DimSegment[segment_key]": "5|South",
+        "DimSegment[category]": "Wellness",
+        "DimSegment[region]": "South",
+        "[Orders]": 659,
+        "[Exposure]": 64731.38,
+        "[Rank]": 20,
+        "[Low95]": 0.0488668365062519,
+        "[High95]": 0.09002617059259492
+      },
+      {
+        "DimSegment[segment_key]": "2|Central",
+        "DimSegment[category]": "Beauty",
+        "DimSegment[region]": "Central",
+        "[Orders]": 1270,
+        "[Exposure]": 62746.08,
+        "[Rank]": 21,
+        "[Low95]": 0.04696552324912682,
+        "[High95]": 0.07488270704936822
+      },
+      {
+        "DimSegment[segment_key]": "5|West",
+        "DimSegment[category]": "Wellness",
+        "DimSegment[region]": "West",
+        "[Orders]": 747,
+        "[Exposure]": 58699.35,
+        "[Rank]": 22,
+        "[Low95]": 0.03843336819254886,
+        "[High95]": 0.07296802023609655
+      },
+      {
+        "DimSegment[segment_key]": "5|Central",
+        "DimSegment[category]": "Wellness",
+        "DimSegment[region]": "Central",
+        "[Orders]": 704,
+        "[Exposure]": 48893.12,
+        "[Rank]": 23,
+        "[Low95]": 0.04216495930001824,
+        "[High95]": 0.0792121640487347
+      },
+      {
+        "DimSegment[segment_key]": "5|East",
+        "DimSegment[category]": "Wellness",
+        "DimSegment[region]": "East",
+        "[Orders]": 668,
+        "[Exposure]": 45265.95,
+        "[Rank]": 24,
+        "[Low95]": 0.04363094607624549,
+        "[High95]": 0.08262798736118902
+      },
+      {
+        "DimSegment[segment_key]": "5|North",
+        "DimSegment[category]": "Wellness",
+        "DimSegment[region]": "North",
+        "[Orders]": 716,
+        "[Exposure]": 42313.03,
+        "[Rank]": 25,
+        "[Low95]": 0.043745303675884396,
+        "[High95]": 0.08143364300984865
+      },
+      {
+        "DimSegment[segment_key]": "1|Unknown",
+        "DimSegment[category]": "Apparel",
+        "DimSegment[region]": "Unknown",
+        "[Orders]": 26,
+        "[Exposure]": 6848.51,
+        "[Rank]": null,
+        "[Low95]": 0.13150760287989469,
+        "[High95]": 0.4815173401240238
+      },
+      {
+        "DimSegment[segment_key]": "4|Unknown",
+        "DimSegment[category]": "Electronics",
+        "DimSegment[region]": "Unknown",
+        "[Orders]": 11,
+        "[Exposure]": 1711.63,
+        "[Rank]": null,
+        "[Low95]": 0.01787621309507289,
+        "[High95]": 0.4041500267952385
+      },
+      {
+        "DimSegment[segment_key]": "3|Unknown",
+        "DimSegment[category]": "Home",
+        "DimSegment[region]": "Unknown",
+        "[Orders]": 24,
+        "[Exposure]": 929.59,
+        "[Rank]": null,
+        "[Low95]": 0.0084559878098264,
+        "[High95]": 0.2266936007412256
+      },
+      {
+        "DimSegment[segment_key]": "2|Unknown",
+        "DimSegment[category]": "Beauty",
+        "DimSegment[region]": "Unknown",
+        "[Orders]": 25,
+        "[Exposure]": 585.83,
+        "[Rank]": null,
+        "[Low95]": 0.008881448800795402,
+        "[High95]": 0.23613119344674208
+      },
+      {
+        "DimSegment[segment_key]": "5|Unknown",
+        "DimSegment[category]": "Wellness",
+        "DimSegment[region]": "Unknown",
+        "[Orders]": 10,
+        "[Exposure]": 0.0,
+        "[Rank]": null,
+        "[Low95]": 3.584186086443356E-17,
+        "[High95]": 0.3543304350666874
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "[Mature Orders]": 26301,
+        "[Net Change]": -263010.0
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "[Marketing Must Be Blank]": null,
+        "[After Marketing Must Be Blank]": null,
+        "[Selected Orders]": 9833
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "[Net Change]": 0.0
+      }
+    ]
+  },
+  {
+    "rows": [
+      {
+        "SensitivityRecovery[Percent]": 0,
+        "[Net]": -263010.0
+      },
+      {
+        "SensitivityRecovery[Percent]": 5,
+        "[Net]": 353378.868
+      },
+      {
+        "SensitivityRecovery[Percent]": 10,
+        "[Net]": 969767.736
+      },
+      {
+        "SensitivityRecovery[Percent]": 15,
+        "[Net]": 1586156.6039999998
+      },
+      {
+        "SensitivityRecovery[Percent]": 20,
+        "[Net]": 2202545.472
+      },
+      {
+        "SensitivityRecovery[Percent]": 25,
+        "[Net]": 2818934.34
+      },
+      {
+        "SensitivityRecovery[Percent]": 30,
+        "[Net]": 3435323.2079999996
+      },
+      {
+        "SensitivityRecovery[Percent]": 35,
+        "[Net]": 4051712.0759999994
+      },
+      {
+        "SensitivityRecovery[Percent]": 40,
+        "[Net]": 4668100.944
+      }
+    ]
+  }
+]

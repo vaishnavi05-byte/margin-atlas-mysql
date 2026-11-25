@@ -1,0 +1,25 @@
+table DimSegment
+	lineageTag: 6bd769ea-80cf-4d32-b0f4-e4700ad4685c
+
+	column segment_key
+		dataType: string
+		lineageTag: 15626862-2a1a-4350-9225-48b01c1c31cf
+		summarizeBy: none
+		sourceColumn: segment_key
+
+	column category
+		dataType: string
+		lineageTag: 014b39a6-d182-443e-a379-460176f7ebd0
+		summarizeBy: none
+		sourceColumn: category
+
+	column region
+		dataType: string
+		lineageTag: aef64876-5309-41ea-a1db-8cd054ec64ed
+		summarizeBy: none
+		sourceColumn: region
+
+	partition DimSegment = m
+		mode: import
+		source = ReadCSV("DimSegment",{{"segment_key",type text},{"category",type text},{"region",type text}})
+
