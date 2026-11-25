@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def verify():
     findings=json.loads((ROOT/'docs/commerce-findings.json').read_text())
-    native=json.loads((ROOT/'docs/commerce-native-results.json').read_text(encoding='utf-8-sig'))
+    native=json.loads((ROOT/'docs/commerce-dax-results.json').read_text(encoding='utf-8-sig'))
     checks=0
     def compare(row,expected,dimension=None):
         nonlocal checks
