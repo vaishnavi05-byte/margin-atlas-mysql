@@ -14,6 +14,8 @@
 
 Expanded evidence: `commerce-native-validation.json`, `commerce-native-results.json`, `commerce-mysql-validation.json`, `commerce-mysql-results.json`, `commerce-findings.json` and `dashboard-suite.md`.
 
+The expanded release also passed both GitHub Actions runners: [45716311301](https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45716311301). The tested functional commit is `eb5a360b39735bdb2a5160eba905b792112640d9`; subsequent changes record release evidence and metadata only.
+
 ## Original seven-page baseline
 
 Checks performed 25 November 2026 on the included synthetic snapshot.
@@ -25,7 +27,7 @@ Checks performed 25 November 2026 on the included synthetic snapshot.
 - The native PBIP opened in Power BI Desktop 2.160.1151.0 and refreshed successfully. Imported PBIX output is included.
 - Read-only DAX checks executed against Desktop's actual semantic engine using Microsoft's official ADOMD client. Totals, all 30 segment exposures/ranks/Wilson intervals, scenario boundary cases, unsupported marketing attribution and the nine-point sensitivity curve matched Python.
 - Desktop category filtering was observed: selecting Apparel produced 9,833 orders and blank marketing-dependent measures. Clear selections restored 30,000 orders. Native page navigation opened Scenario lab. Selecting 15% recovery updated modeled benefit to INR 1,849,166.60 (display rounded on cards).
-- Native drillthrough from Apparel–East opened 1,945 orders and INR 441,330.13 exposure; the back action returned to the queue. With 15% avoidance and INR 10 intervention cost, the scenario displayed INR 1,586,156.60 net change (rounded on cards).
+- Native drillthrough from Apparelâ€“East opened 1,945 orders and INR 441,330.13 exposure; the back action returned to the queue. With 15% avoidance and INR 10 intervention cost, the scenario displayed INR 1,586,156.60 net change (rounded on cards).
 - All seven pages were captured from the native report for visual inspection. PBIR CLI validation found zero errors; unavailable current-version schema endpoints are reported as warnings rather than claimed as complete schema coverage.
 
 `data/validation.json` fingerprints source files. `docs/native-validation.json` and `docs/mysql-validation.json` contain machine-readable reconciliation evidence. Screenshot images show actual Desktop rendering; they are not design mockups.

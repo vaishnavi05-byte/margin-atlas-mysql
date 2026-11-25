@@ -7,7 +7,7 @@
   "native_dax_reconciled": true,
   "native_category_filter_reset_navigation_scenario_and_drillthrough_verified": true,
   "native_pbix_included": true,
-  "github_remote_workflow_run_verified": false,
+  "github_remote_workflow_run_verified": true,
   "power_bi_service_publication_verified": false,
   "model_business_tables": 16,
   "model_measures": 60,
@@ -15,7 +15,10 @@
   "mysql_cohort_and_grain_diagnostics_verified": true,
   "github_project_branch_published": true,
   "github_branch": "https://github.com/vaishnavi05-byte/margin-atlas-mysql/tree/codex/decision-studio",
-  "github_verified_platforms": [],
+  "github_verified_platforms": [
+    "ubuntu-latest",
+    "windows-latest"
+  ],
   "expanded_release_date": "2026-11-26",
   "native_commerce_numeric_comparisons": 519,
   "mysql_commerce_numeric_comparisons": 302,
@@ -25,5 +28,8 @@
   "previous_github_actions_run_url": "https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45653041355",
   "previous_github_tested_project_commit": "ba8f682bee0b43ba72399d6a110deff001717bc3",
   "expanded_pbix_bytes": 3146140,
-  "expanded_pbix_sha256": "cb76f32d0d8f973eb06310733e063f3bf181679c09e44971d6f96e55ae177ac8"
+  "expanded_pbix_sha256": "cb76f32d0d8f973eb06310733e063f3bf181679c09e44971d6f96e55ae177ac8",
+  "github_actions_run_url": "https://github.com/vaishnavi05-byte/margin-atlas-mysql/actions/runs/45716311301",
+  "github_tested_project_commit": "eb5a360b39735bdb2a5160eba905b792112640d9",
+  "github_pbix_remote_size_verified": 3146140
 }
