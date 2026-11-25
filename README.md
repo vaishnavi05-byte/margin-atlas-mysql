@@ -1,5 +1,18 @@
 # Margin Atlas
 
+## Latest eleven-page dashboard suite
+
+The current flagship is **[Margin Atlas Decision Studio](https://github.com/vaishnavi05-byte/margin-atlas-mysql/tree/codex/decision-studio)**: 11 native Power BI pages, 60 DAX measures, SQL/Python reconciliation and 14 regression tests. It uses an explicitly synthetic snapshot of 30,000 orders, 60,209 items and 60 products.
+
+New dashboards cover **channel economics, promotion diagnostics, payment and fulfilment, and product/basket merchandise economics**, alongside the existing delivery, cohorts, investigation and scenario pages.
+
+[Open the final project and dashboard gallery](https://github.com/vaishnavi05-byte/margin-atlas-mysql/tree/codex/decision-studio) | [Download the expanded PBIX](https://github.com/vaishnavi05-byte/margin-atlas-mysql/raw/refs/heads/codex/decision-studio/powerbi/MarginAtlasDecisionStudio_Expanded.pbix) | [Dashboard catalog and interview explanation](https://github.com/vaishnavi05-byte/margin-atlas-mysql/tree/codex/decision-studio/docs/dashboard-suite.md)
+
+Product merchandise margin is before refunds and shared costs; scenarios are hypothetical, not achieved savings. The earlier MySQL implementation is preserved below.
+
+## Earlier MySQL implementation
+
+
 An e-commerce analytics project investigating how discounts,
 returns, fulfilment costs, and marketing affect contribution.
 ## Report previews
